@@ -57,19 +57,21 @@ const ProductDetail = () => {
           <h1 className="mb-3 ">
             Find Your <span>Colors</span> Today
           </h1>
-          <p>
-            <a
-              href="#"
-              className="text-decoration-none"
-              style={{ color: "#f06" }}
-            >
-              Choose by Emotion
-            </a>{" "}
-            |{" "}
-            <a href="#" className="text-decoration-none" style={{color:"#000"}}>
-              Choose by Trend
-            </a>
-          </p>
+          <div className="mt-4 tabs_click">
+          <button
+            className={`btn btn-link active`}
+            // onClick={() => handleTabChange("emotions")}
+          >
+            Choose by Emotions
+          </button>
+          <span className="mx-2">|</span>
+          <button
+            className={`btn btn-link `}
+            // onClick={() => handleTabChange("trends")}
+          >
+            Choose by Trends
+          </button>
+        </div>
         </div>
       </div>
 
