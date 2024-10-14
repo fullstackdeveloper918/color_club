@@ -57,11 +57,18 @@
   min-width: 300px;
   width: 300px;
   padding: 50px 15px 20px;
-  border: 1px solid #dd28a0;
+  border: 0;
   text-align: center;
   z-index: 1;
+ 
 }
-
+.innerProductPopup .popup_product{
+  bottom: 20px;
+  right: 50px;
+  left: auto;
+  top: 20px;
+  height: fit-content;
+}
 .popup_productheader {
   text-align: right;
   cursor: pointer;
@@ -88,9 +95,9 @@
   color: #111;
   font-family: Poppins;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
-  line-height: 24px;
+  line-height: 20px;
   text-decoration: none;
 }
 .popup_body h5 {
@@ -346,8 +353,35 @@ h2.pick_mood {
   font-size: 14px;
   line-height: 11px;
 }
-/* cololabs_sec */
 
+.colo-md-6 {
+  border: 1px solid #e3e3e3;
+  padding: 20px;
+  box-shadow: 0 0 10px rgb(211 208 208 / 50%);
+  min-width: 300px;
+  height: fit-content;
+  min-height: 370px;
+}
+.btnCart {
+  border: 1px solid #000;
+  border-radius: 30px;
+  padding: 5px 40px;
+  text-transform: capitalize;
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+}
+.flexBox{
+  display: flex;
+  gap: 20px;
+}
+/* cololabs_sec */
+@media (min-width:767px){
+.backBtn{
+display: none;
+
+}
+}
 @media (max-width:1440px){
   .emoji-container span.emoji .emojii {
     max-width: 40px;
@@ -359,6 +393,24 @@ h2.pick_mood {
 .tabs_click button  {
   font-size: 20px;
   line-height: 20px;
+}
+}
+@media (max-width:1190px){
+  .colo-md-6 {
+    min-width: 200px;
+}
+.btnCart {
+  padding: 5px 30px;
+  font-size: 13px;
+}
+}
+@media (max-width:991px){
+  .mediumResponsive{
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  .colo-md-6 {
+    min-width: 50%;
 }
 }
 @media (max-width:767px){
@@ -425,6 +477,31 @@ p.bottom_emoji {
 .chooseby_trend {
   margin: 10px 0px 0px !important;
   padding-bottom: 10px;
+}
+
+.colo-md-6 {
+  min-width: 220px;
+  width: 300px;
+}
+.innerProductPopup{
+  padding: 20px !important;
+}
+.flexBox {
+  flex-wrap: wrap;
+}
+.color-circle {
+  width: 40px;
+  height: 40px;
+}
+.backBtn{
+  display: block;
+  color:rgb(255, 0, 102) !important;
+  text-decoration: none;
+}
+}
+@media (max-width:480px){
+  .colo-md-6 {
+    width: 100%;
 }
 }
 @media (max-width:375px){

@@ -66,7 +66,7 @@ const ProductDetail = () => {
               Choose by Emotion
             </a>{" "}
             |{" "}
-            <a href="#" className="text-decoration-none">
+            <a href="#" className="text-decoration-none" style={{color:"#000"}}>
               Choose by Trend
             </a>
           </p>
@@ -77,7 +77,7 @@ const ProductDetail = () => {
       <div className="row">
         <div className="col-1">
           <Link to={"/"}>
-            <button className="btn btn-link">
+            <button className="btn btn-link backBtn">
               <span className="bi bi-arrow-left"></span> BACK
             </button>
           </Link>
@@ -86,10 +86,10 @@ const ProductDetail = () => {
 
       {/* Nail Artist Profile */}
       <div className="row justify-content-center text-white mt-3">
-        <div className="d-flex">
-        <div className="colo-md-6">
+        <div className="d-flex gap-3  mediumResponsive">
+        <div className="flexBox">
         {selectedProducts.slice(0,2).map((res: any, index: number) => (
-            <div className="">
+            <div className="colo-md-6">
               <div className="text-center">
                 <div className="d-flex">
                   <h6 className="mt-2 text-black">COLOR {index + 1}</h6>
@@ -101,33 +101,37 @@ const ProductDetail = () => {
                     -
                   </button>
                 </div>
+                <div className="text-center">
                 <img
                   src={res?.image} // Replace with actual image
                   alt="Color 1"
                   className="rounded"
                 />
-                +
+                <h6 className="text-black">{res?.name}</h6>
+                
               </div>
-              <button className="btn btn-outline-secondary btn-sm mt-2">
-                ADD COLOR TO BAG
+            
+             <button className="btn btn-outline-secondary btn-sm mt-4 btnCart">
+                ADD TO BAG
               </button>
+              </div>
             </div>
           ))}
-        </div>
-        <div className="col-md-6 bg-dark p-4 rounded">
-          <div className="row">
-            <div className="col-3 text-center">
+          </div>
+        <div className=" bg-dark p-5 rounded position-relative p-sm-3 innerProductPopup w-100">
+          <div className="row ">
+            <div className="col-md-3 col-sm-12 text-center">
               <img
                 src="https://via.placeholder.com/100" // Replace with the actual image
                 alt="Bessie Nail Artist"
                 className="rounded-circle"
               />
-              <p className="mt-2">Beetles Nail Artist</p>
-              <h5>Bessie</h5>
+              <p className="mt-2 mb-1">Beetles Nail Artist</p>
+              <h5 style={{color:"#dc41a1"}}>Bessie</h5>
             </div>
-            <div className="col-9">
+            <div className="col-md-9 col-sm-12">
               <p>
-                Hey, I'm Bessie, your local nail artist! Choose Mysterious
+              Hey, I'm Bessie, your local nail artist! Choose Mysterious
                 Delight for a fabulous look. Mix it with other colors to create
                 a unique, visually pleasing nail design. Explore new styles and
                 bring joy to your nails!
@@ -184,12 +188,13 @@ const ProductDetail = () => {
                     ))
                   : ""}
               </div>
-              <button className="btn btn-link mt-3" style={{ color: "#f06" }}>
+              {/* <button className="btn btn-link mt-3" style={{ color: "#f06" }}>
                 I Just Want One Color <span>&gt;</span>
-              </button>
+              </button> */}
             </div>
           </div>
-        </div>
+          {/* model move  */}
+
         {modalVisible && (
         <div
           className=" fade show"
@@ -200,9 +205,9 @@ const ProductDetail = () => {
           <div className="popup_product">
             <div className="popup_productcontent">
               <div className="popup_productheader">
-                <h5 className="modal-title" id="exampleModalLabel">
+                {/* <h5 className="modal-title" id="exampleModalLabel">
                   Products for {selectedColor?.name}
-                </h5>
+                </h5> */}
                 <button
                   type="button"
                   className="btn-close"
@@ -241,6 +246,9 @@ const ProductDetail = () => {
           </div>
         </div>
       )}
+        </div>
+
+
       </div>
       </div>
 
