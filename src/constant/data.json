@@ -1,0 +1,701 @@
+{
+    "moods": [
+      {
+        "mood": "Happy",
+        "products": [
+          {
+            "id": "Product 001",
+            "name": "Canary Yellow #a649 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/gel-nail-polish-15ml-cl345",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/93a50e3355cf4ab8923e8fff9f18a726_compact.jpg",
+            "color_name": "Super Lemon",
+            "hex_code": "#F9DC24"
+          },
+          {
+            "id": "Product 002",
+            "name": "Vannilla Frosting #a809 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/vannilla-frosting-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/93a50e3355cf4ab8923e8fff9f18a726_compact.jpg",
+            "color_name": "Lemon Verbena",
+            "hex_code": "#F3E792"
+          },
+          {
+            "id": "Product 005",
+            "name": "Clara Ochre #a247 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/clara-ochre",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/e65d12e815b64180942be1c5517d4751_compact.jpg",
+            "color_name": "Elfin Yellow",
+            "hex_code": "#E8B51A"
+          },
+          {
+            "id": "Product 006",
+            "name": "Beetles Cat Eye Gel Polish: Chameleon Magic Effect, 15ML Nail Soak Off UV Gel",
+            "link": "https://9c35bd-26.myshopify.com/products/saturn-b740-cat-eye-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/48875e067933456cbc30e438e2d908dd_compact.jpg",
+            "color_name": "Buttercup",
+            "hex_code": "#F3B71B"
+          },
+          {
+            "id": "Product 008",
+            "name": "Glitter Orange Glow in the Dark |15ml Nail Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/glitter-orange-glow-in-the-dark-15ml-nail-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/93a50e3355cf4ab8923e8fff9f18a726_compact.jpg",
+            "color_name": "Sunshine Orange",
+            "hex_code": "#FFA400"
+          },
+          {
+            "id": "Product 009",
+            "name": "Champagne Gold#b545 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/champagne-gold-b545-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/050b91679aa64b578367a62319d1ed50_compact.jpg",
+            "color_name": "Pale Gold",
+            "hex_code": "#E3C565"
+          },
+          {
+            "id": "Product 010",
+            "name": "Confetti Party #b574 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/confetti-party-b574-15ml-crystal-colorful-confetti-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/1e68a695d69f497f8e02019883ad78e6_compact.png",
+            "color_name": "Warm Apricot",
+            "hex_code": "#FFC88F"
+          },
+          {
+            "id": "Product 014",
+            "name": "Lemon Chiffon #a735 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/lemon-chiffon-15ml-gel-polish-1",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/93a50e3355cf4ab8923e8fff9f18a726_compact.jpg",
+            "color_name": "Creamy Daffodil",
+            "hex_code": "#FFEC84"
+          },
+          {
+            "id": "Product 016",
+            "name": "Pearlescent Champagne#d037 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/pearlescent-champagne-d037-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/93a50e3355cf4ab8923e8fff9f18a726_compact.jpg",
+            "color_name": "Golden Cream",
+            "hex_code": "#F3E5AB"
+          },
+          {
+            "id": "Product 017",
+            "name": "Tammy Tangerine #a467 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/gel-nail-polish-15ml-cl303",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/93a50e3355cf4ab8923e8fff9f18a726_compact.jpg",
+            "color_name": "Orange Zest",
+            "hex_code": "#FB9902"
+          }
+        ]
+      },
+      {
+        "mood": "Peaceful",
+        "products": [
+          {
+            "id": "Product 019",
+            "name": "Dreamy Blue |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/dreamy-blue-15ml-gel-polish",
+            "image":"",
+            "color_name": "Ice Water",
+            "hex_code": "#B2EBF2"
+          },
+          {
+            "id": "Product 021",
+            "name": "Diana Sky Blue #a513 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/gel-nail-polish-15ml-cl296",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/9af41d79929e42ae9b4ed5f6c43816a4_compact.jpg",
+            "color_name": "Alaskan Blue",
+            "hex_code": "#9DC9EB"
+          },
+          {
+            "id": "Product 022",
+            "name": "Electric Punk #c444 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/electric-punk-c444-15ml-gel-polish",
+            "image":"",
+            "color_name": "Azure Blue",
+            "hex_code": "#007FFF"
+          },
+          {
+            "id": "Product 024",
+            "name": "Serene Oasis |15ml Nail Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/serene-oasis-15ml-nail-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/1-185_compact.jpg",
+            "color_name": "Patina Green",
+            "hex_code": "#78A5A3"
+          },
+          {
+            "id": "Product 028",
+            "name": "Dark Teal #b797 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/-b797-15ml-gel-polish",
+            "image":"",
+            "color_name": "Lush Meadow",
+            "hex_code": "#006B54"
+          },
+          {
+            "id": "Product 029",
+            "name": "Cascade Green |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/cascade-green-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/image-1-229_compact.jpg",
+            "color_name": "Pale Aqua",
+            "hex_code": "#AFEEEE"
+          },
+          {
+            "id": "Product 030",
+            "name": "Mermaid Tears #b543 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/cl487",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/dc15cc9b31b3432e91de940382400298_compact.jpg",
+            "color_name": "Misty Blue",
+            "hex_code": "#B0E0E6"
+          },
+          {
+            "id": "Product 031",
+            "name": "Sage #a802 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/sage-a802-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/34e287635f034dae83af4ceb294cb143_compact.jpg",
+            "color_name": "Soft Sage",
+            "hex_code": "#C1CDC1"
+          },
+          {
+            "id": "Product 032",
+            "name": "Mermaid Turquoise #e069 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/mermaid-turquoise-e069-15ml-gel-polish",
+            "image":"",
+            "color_name": "Sea Foam Green",
+            "hex_code": "#9FE2BF"
+          },
+          {
+            "id": "Product 036",
+            "name": "Periwinkle #a816 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/periwinkle-a816-15ml-gel-polish",
+            "image":"",
+            "color_name": "Periwinkle",
+            "hex_code": "#CCCCFF"
+          }
+        ]
+      },
+      {
+        "mood": "Excited",
+        "products": [
+          {
+            "id": "Product 038",
+            "name": "Pink Lady #b544 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/cl488",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/78d51109bc3946f389ddac6bdf3cd597_compact.jpg",
+            "color_name": "Kumquat",
+            "hex_code": "#FF8C00"
+          },
+          {
+            "id": "Product 039",
+            "name": "Peach Milkshake #a794 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/peach-milkshake-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/35d6780d242b4160b99522550275cbbb_compact.png",
+            "color_name": "Iceland Poppy",
+            "hex_code": "#FF7F50"
+          },
+          {
+            "id": "Product 041",
+            "name": "Carly Coral #a558 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/gel-nail-polish-15ml-cl317",
+            "image":"",
+            "color_name": "Exuberance",
+            "hex_code": "#FF6F00"
+          },
+          {
+            "id": "Product 042",
+            "name": "Jupiter #b739 | Cat Eye 15ml Nail Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/jupiter-b739-cat-eye-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/5d6e77fcb727489fb6c7e805252967c6_compact.jpg",
+            "color_name": "Flame Red",
+            "hex_code": "#E25822"
+          },
+          {
+            "id": "Product 043",
+            "name": "Magic Maroon #b825 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/magic-maroon-b825-15ml-gel-polish",
+            "image":"",
+            "color_name": "Red Velvet",
+            "hex_code": "#A10000"
+          },
+          {
+            "id": "Product 044",
+            "name": "Cherry Blossom #b428 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/cherry-blossom-b428-15ml-gel-polish",
+            "image":"",
+            "color_name": "Rose Pink",
+            "hex_code": "#FFB7C5"
+          },
+          {
+            "id": "Product 046",
+            "name": "Wild Purple #b815 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/wild-purple-b815-15ml-gel-polish",
+            "image":"",
+            "color_name": "Plum Purple",
+            "hex_code": "#8A2BE2"
+          },
+          {
+            "id": "Product 047",
+            "name": "Sunshine Yellow #b925 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/sunshine-yellow-b925-15ml-gel-polish",
+            "image":"",
+            "color_name": "Goldenrod",
+            "hex_code": "#DAA520"
+          }
+        ]
+      },
+      {
+        "mood": "Satisfied",
+        "products": [
+          {
+            "id": "Product 056",
+            "name": "Sugar Donut #a824 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/sugar-donut-15ml-gel-polish",
+            "image":"",
+            "color_name": "Cinnamon Swirl",
+            "hex_code": "#D29D74"
+          },
+          {
+            "id": "Product 057",
+            "name": "Caramel Toffee #b796 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/b796-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/dc6751c510bb4c4980e03cb3b245f079_compact.png",
+            "color_name": "Cocoa Mocha",
+            "hex_code": "#7B3F00"
+          },
+          {
+            "id": "Product 058",
+            "name": "Beyonce Caramel #a277 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/beyonce-caramel-a277-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/bb0b7f7e069645b99e453cef4eff0a5d_compact.jpg",
+            "color_name": "Warm Taupe",
+            "hex_code": "#AF9483"
+          },
+          {
+            "id": "Product 059",
+            "name": "Natural Beauty #b748 | Transparent Jelly 15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/natural-beauty-b748-transparent-jelly-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/1fbd08beebdf40e69c1da3bb5ca79890_compact.png",
+            "color_name": "Natural Beige",
+            "hex_code": "#D7B99E"
+          },
+          {
+            "id": "Product 060",
+            "name": "Caramel Toffee #b796 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/-b796-15ml-gel-polish",
+            "image":"",
+            "color_name": "Dusty Orange",
+            "hex_code": "#D08466"
+          },
+          {
+            "id": "Product 063",
+            "name": "Natural Nude #b748 |Jelly 15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/natural-beauty-b748-transparent-jelly-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/1fbd08beebdf40e69c1da3bb5ca79890_compact.png",
+            "color_name": "Beige Tan",
+            "hex_code": "#D2B48C"
+          },
+          {
+            "id": "Product 065",
+            "name": "Clara Ochre #a247 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/clara-ochre",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/e65d12e815b64180942be1c5517d4751_compact.jpg",
+            "color_name": "Warm Clay",
+            "hex_code": "#D68A59"
+          },
+          {
+            "id": "Product 066",
+            "name": "Baby Pink #a808 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/baby-pink-15ml-gel-polish",
+            "image":"",
+            "color_name": "Almond Brown",
+            "hex_code": "#D4B996"
+          },
+          {
+            "id": "Product 068",
+            "name": "Kim Nude #a275 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/kim-nude",
+            "image":"",
+            "color_name": "Pale Caramel",
+            "hex_code": "#D4B996"
+          },
+          {
+            "id": "Product 069",
+            "name": "Cecilia Sage #a285 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/cecilia-sage",
+            "image":"",
+            "color_name": "Earthy Taupe",
+            "hex_code": "#A68B5B"
+          }
+        ]
+      },
+      {
+        "mood": "Cool",
+        "products": [
+          {
+            "id": "Product 073",
+            "name": "Periwinkle #a816 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/periwinkle-a816-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/4fc7af6fa9b34df99a02e0470f54e671_compact.jpg",
+            "color_name": "Lavender Fog",
+            "hex_code": "#CEC3E6"
+          },
+          {
+            "id": "Product 074",
+            "name": "Sparkle Pink #b353 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/sparkle-pink-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/1ccd2fdfdb6e4bcaa8312c7481b8fdeb_compact.jpg",
+            "color_name": "Orchid Bloom",
+            "hex_code": "#E6A8D7"
+          },
+          {
+            "id": "Product 075",
+            "name": "Aurora Borealis |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/aurora-borealis-15ml-gel-polish",
+            "image":"",
+            "color_name": "Lavendula",
+            "hex_code": "#B57EDC"
+          },
+          {
+            "id": "Product 076",
+            "name": "Lip Liner #a800 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/lip-liner-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/d4fb795d499342299d59e8814f34e033_compact.jpg",
+            "color_name": "English Lavender",
+            "hex_code": "#B48395"
+          },
+          {
+            "id": "Product 079",
+            "name": "Bonnie Plum #a246 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/bonnie-plum",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/caf78a0cd7ec40b1bfba6db876f1ef64_compact.jpg",
+            "color_name": "Deep Amethyst",
+            "hex_code": "#9966CC"
+          },
+          {
+            "id": "Product 081",
+            "name": "Gracie Gray Blue #a386 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/gracie-gray-blue-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/efadc2ef568f458a9b339fa02787e125_compact.jpg",
+            "color_name": "Grape Purple",
+            "hex_code": "#6F2DA8"
+          },
+          {
+            "id": "Product 082",
+            "name": "Mars #b741 | Cat Eye 15ml Nail Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/mars-b741-cat-eye-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/a690e2eef140427f8ed9214610cdc272_compact.jpg",
+            "color_name": "Eggplant",
+            "hex_code": "#614051"
+          },
+          {
+            "id": "Product 086",
+            "name": "Ultra Violet #b580 | Coloring Changing 15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/ultra-violet-b580-15ml-coloring-changing-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/2f1…_ef0f1ab1-d802-4977-a059-1fe6efbad9d3_compact.png",
+            "color_name": "Mystic Lavender",
+            "hex_code": "#DDA0DD"
+          },
+          {
+            "id": "Product 087",
+            "name": "Very Peri #b579 | Coloring Changing 15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/very-peri-b579-15ml-gel-polish",
+            "image":"",
+            "color_name": "Soft Plum",
+            "hex_code": "#9D81BA"
+          },
+          {
+            "id": "Product 088",
+            "name": "Lilac in Dreams Cat Eye|15ml Holographic Glitter Nail Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/lilac-in-dreams-cat-eye-15ml-gel-polish",
+            "image":"",
+            "color_name": "Deep Lilac",
+            "hex_code": "#C8A2C8"
+          }
+        ]
+      },
+      {
+        "mood": "Love-filled",
+        "products": [
+          {
+            "id": "Product 091",
+            "name": "Flamingo #a823 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/l-flamingo-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/cd4149f37dad47b68f691135acae6ba0_compact.jpg",
+            "color_name": "Plumeria",
+            "hex_code": "#EA738D"
+          },
+          {
+            "id": "Product 094",
+            "name": "Party Fever #b800 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/b800-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/8ffdb86f73a840e5bb1f85cac7b933e1_compact.png",
+            "color_name": "High Risk Red",
+            "hex_code": "#D32F2F"
+          },
+          {
+            "id": "Product 095",
+            "name": "Scarlett Red #a222 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/scarlett-red",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/f87…_868bb849-26d8-4236-a005-00d662855ed1_compact.jpg",
+            "color_name": "Barbados Cherry",
+            "hex_code": "#D2042D"
+          },
+          {
+            "id": "Product 096",
+            "name": "Alicia Jam #b973 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/alicia-jam",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/afc4cdf977a84be1850f83f4db3507b5_compact.jpg",
+            "color_name": "Rose Red",
+            "hex_code": "#C21E56"
+          },
+          {
+            "id": "Product 099",
+            "name": "Crazy Pink #a778 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/crazy-pink-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/7cf1591b7abf4b69986965cc5d89f8ac_compact.jpg",
+            "color_name": "Passion Red",
+            "hex_code": "#C71585"
+          },
+          {
+            "id": "Product 100",
+            "name": "Soft Pink #a734 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/soft-pink-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/638…_65753272-9c68-495b-8528-3fabd8715c66_compact.png",
+            "color_name": "Hot Pink",
+            "hex_code": "#FF69B4"
+          },
+          {
+            "id": "Product 101",
+            "name": "Scarlett Red #a222 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/scarlett-red",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/f87…_868bb849-26d8-4236-a005-00d662855ed1_compact.jpg",
+            "color_name": "Scarlet",
+            "hex_code": "#FF2400"
+          },
+          {
+            "id": "Product 102",
+            "name": "Red #a382 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/red-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/6d9266e4626e4c2fa1b109d4e49a9943_compact.png",
+            "color_name": "Fire Red",
+            "hex_code": "#B22222"
+          },
+          {
+            "id": "Product 103",
+            "name": "Bella Light #a256 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/bella-light",
+            "image":"",
+            "color_name": "Blush Pink",
+            "hex_code": "#F4C2C2"
+          },
+          {
+            "id": "Product 106",
+            "name": "Neon Pink |15ml Gel Polish Summer Nail Designs",
+            "link": "https://9c35bd-26.myshopify.com/products/neon-pink-15ml-gel-polish-1",
+            "image":"",
+            "color_name": "Magenta",
+            "hex_code": "#FF00FF"
+          },
+          {
+            "id": "Product 107",
+            "name": "Vanessa Purple #a238 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/vanessa-wine",
+            "image":"",
+            "color_name": "Plum Blossom",
+            "hex_code": "#DA1D81"
+          },
+          {
+            "id": "Product 108",
+            "name": "Flamingo #a823 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/l-flamingo-15ml-gel-polish",
+            "image":"",
+            "color_name": "Deep Blush",
+            "hex_code": "#E75480"
+          }
+        ]
+      },
+      {
+        "mood": "Playful",
+        "products": [
+          {
+            "id": "Product 109",
+            "name": "Pink Champagne #b072 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/pink-champagne-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/34ad2dcad38c491988bf181bf8637a7b_compact.jpg",
+            "color_name": "Ballet Slipper",
+            "hex_code": "#F2C1D1"
+          },
+          {
+            "id": "Product 110",
+            "name": "Kitty Pink #a263 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/kitty-pink",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/image-1-165_compact.jpg",
+            "color_name": "Fairy Tale Pink",
+            "hex_code": "#F8BBD0"
+          },
+          {
+            "id": "Product 111",
+            "name": "Pink Ribbon #a791 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/pink-ribbon-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/c72ccb04e194441397a4d895cfeea5b1_compact.png",
+            "color_name": "Lilac Sachet",
+            "hex_code": "#E6A6BE"
+          },
+          {
+            "id": "Product 112",
+            "name": "Paradise Twilight |15ml Gel Polish Pink Lovely Nails",
+            "link": "https://9c35bd-26.myshopify.com/products/paradise-twilight-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/1-85_compact.jpg",
+            "color_name": "Begonia Pink",
+            "hex_code": "#F778A1"
+          },
+          {
+            "id": "Product 113",
+            "name": "Ballet Slippers #a803 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/ballet-slippers-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/11da025f4c5749b38533bd3336742be1_compact.png",
+            "color_name": "Cashmere Rose",
+            "hex_code": "#D8A1B7"
+          },
+          {
+            "id": "Product 114",
+            "name": "Pink Tourmaline |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/pink-tourmaline-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/image-1-164_compact.jpg",
+            "color_name": "Sweet Lavender",
+            "hex_code": "#DDA0DD"
+          },
+          {
+            "id": "Product 116",
+            "name": "Diana Sky Blue #a513 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/gel-nail-polish-15ml-cl296",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/9af41d79929e42ae9b4ed5f6c43816a4_compact.jpg",
+            "color_name": "Baby Blue",
+            "hex_code": "#89CFF0"
+          },
+          {
+            "id": "Product 117",
+            "name": "Mocha Mouse Cake #b071 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/mocha-mouse-cake-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/efc210286835482abc444c26dd900a6f_compact.jpg",
+            "color_name": "Lemonade Pink",
+            "hex_code": "#F5C7C5"
+          },
+          {
+            "id": "Product 119",
+            "name": "Kitty Pink #a263 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/kitty-pink",
+            "image":"",
+            "color_name": "Blush Peach",
+            "hex_code": "#FFCCCB"
+          },
+          {
+            "id": "Product 120",
+            "name": "Fairy Kisses|15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/fairy-kisses-15ml-gel-polish",
+            "image":"",
+            "color_name": "Pale Violet Red",
+            "hex_code": "#DB7093"
+          },
+          {
+            "id": "Product 123",
+            "name": "Lilacs #a817 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/e-lilacs-15ml-gel-polish",
+            "image":"",
+            "color_name": "Lavender Mist",
+            "hex_code": "#E6E6FA"
+          },
+          {
+            "id": "Product 124",
+            "name": "A-Year 2 Kilo|15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/a-year-2-kilo-15ml-gel-polish",
+            "image":"",
+            "color_name": "Candy Pink",
+            "hex_code": "#FF69B4"
+          }
+        ]
+      },
+      {
+        "mood": "Hopeful",
+        "products": [
+          {
+            "id": "Product 127",
+            "name": "Dark Teal #b797 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/b797-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/9ce10b5526a54f47a50d1d48b2cdc58c_compact.png",
+            "color_name": "Patina Green",
+            "hex_code": "#78A5A3"
+          },
+          {
+            "id": "Product 128",
+            "name": "Malachite Crystal #b798 | Transparent Jelly 15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/malachite-crystal-b798-transparent-jelly-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/37e89cfb6ff24364b3b18a13d5aecf0a_compact.png",
+            "color_name": "Summer Green",
+            "hex_code": "#9FD989"
+          },
+          {
+            "id": "Product 129",
+            "name": "Green Bee #b201 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/green-bee-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/499739de884246618b52d2ea9ea21303_compact.jpg",
+            "color_name": "Vibrant Green",
+            "hex_code": "#00B140"
+          },
+          {
+            "id": "Product 130",
+            "name": "Emerald #a820 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/emerald-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/eeed1c7d0cf44a819eab3543325651fd_compact.jpg",
+            "color_name": "Jelly Bean Green",
+            "hex_code": "#297B57"
+          },
+          {
+            "id": "Product 131",
+            "name": "Emma Emerald #a287 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/emma-emerald-a287-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/24534f6b110648939baff96812769c87_compact.jpg",
+            "color_name": "Lush Meadow",
+            "hex_code": "#006B54"
+          },
+          {
+            "id": "Product 132",
+            "name": "Canary Yellow #a649 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/gel-nail-polish-15ml-cl345",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/93a50e3355cf4ab8923e8fff9f18a726_compact.jpg",
+            "color_name": "Canary Yellow",
+            "hex_code": "#FFEF00"
+          },
+          {
+            "id": "Product 134",
+            "name": "Eucalyptus #a827 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/eucalyptus-a827-15ml-gel-polish-1",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/0ce…_dea695b5-d49e-4647-8f2e-0a830b8ad00e_compact.jpg",
+            "color_name": "Pale Lime",
+            "hex_code": "#D4ED91"
+          },
+          {
+            "id": "Product 135",
+            "name": "Sage #a802 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/sage-a802-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/34e287635f034dae83af4ceb294cb143_compact.jpg",
+            "color_name": "Light Olive",
+            "hex_code": "#B8B67E"
+          },
+          {
+            "id": "Product 138",
+            "name": "Mermaid Turquoise #e069 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/mermaid-turquoise-e069-15ml-gel-polish",
+            "image":"",
+            "color_name": "Mint Green",
+            "hex_code": "#98FF98"
+          },
+          {
+            "id": "Product 143",
+            "name": "Luminous Yellow Noctilucent | 15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/luminous-yellow-noctilucent-15ml-gel-polish",
+            "image":"",
+            "color_name": "Fresh Lime",
+            "hex_code": "#BFFF00"
+          }
+        ]
+      }
+    ]
+  }
+  

@@ -1,0 +1,52 @@
+{
+    "varient":[
+        {
+            "id": "Product 021",
+            "name": "Diana Sky Blue #a513 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/gel-nail-polish-15ml-cl296",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/9af41d79929e42ae9b4ed5f6c43816a4_compact.jpg",
+            "color_name": "Alaskan Blue",
+            "hex_code": "#9DC9EB"
+          },
+          {
+            "id": "Product 010",
+            "name": "Confetti Party #b574 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/confetti-party-b574-15ml-crystal-colorful-confetti-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/1e68a695d69f497f8e02019883ad78e6_compact.png",
+            "color_name": "Warm Apricot",
+            "hex_code": "#FFC88F"
+          },
+          {
+            "id": "Product 030",
+            "name": "Mermaid Tears #b543 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/cl487",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/dc15cc9b31b3432e91de940382400298_compact.jpg",
+            "color_name": "Misty Blue",
+            "hex_code": "#B0E0E6"
+          },
+          {
+            "id": "Product 079",
+            "name": "Bonnie Plum #a246 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/bonnie-plum",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/caf78a0cd7ec40b1bfba6db876f1ef64_compact.jpg",
+            "color_name": "Deep Amethyst",
+            "hex_code": "#9966CC"
+          },
+          {
+            "id": "Product 128",
+            "name": "Malachite Crystal #b798 | Transparent Jelly 15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/malachite-crystal-b798-transparent-jelly-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/37e89cfb6ff24364b3b18a13d5aecf0a_compact.png",
+            "color_name": "Summer Green",
+            "hex_code": "#9FD989"
+          },
+          {
+            "id": "Product 029",
+            "name": "Cascade Green |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/cascade-green-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/image-1-229_compact.jpg",
+            "color_name": "Pale Aqua",
+            "hex_code": "#AFEEEE"
+          }
+    ]
+}

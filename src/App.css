@@ -1,0 +1,448 @@
+.color-box {
+  height: 100px; /* Adjust height based on your design */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  margin: 5px; /* Space between color boxes */
+}
+
+/* Define colors similar to your design */
+.bg-light-purple {
+  background-color: #e0b3ff; /* Light Purple */
+}
+
+.bg-light-pink {
+  background-color: #ffcccb; /* Light Pink */
+}
+
+.bg-pink {
+  background-color: #ff69b4; /* Pink */
+}
+
+.bg-light-red {
+  background-color: #ff9999; /* Light Red */
+}
+
+.bg-dark-purple {
+  background-color: #6f2c91; /* Dark Purple */
+}
+
+.bg-dark-pink {
+  background-color: #d5006d; /* Dark Pink */
+}
+
+.bg-deep-pink {
+  background-color: #ff1493; /* Deep Pink */
+}
+
+.bg-light-lavender {
+  background-color: #e6e6fa; /* Light Lavender */
+}
+
+.emoji {
+  font-size: 24px; /* Emoji size */
+}
+
+.active {
+  font-weight: bold; /* Highlight active tab */
+  color: #dc3545; /* Bootstrap danger color */
+}
+.modal {
+  /* background: rgba(0, 0, 0, 0.5); Dark overlay */
+}
+.popup_product {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #fff;
+  min-width: 300px;
+  width: 300px;
+  padding: 50px 15px 20px;
+  border: 1px solid #dd28a0;
+  text-align: center;
+  z-index: 1;
+}
+
+.popup_productheader {
+  text-align: right;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  z-index: 1;
+  top: 10px;
+  background: #000;
+  width: 25px;
+  height: 25px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.popup_productheader button.btn-close {
+  filter: invert(1);
+  opacity: 1;
+}
+.popup_body a {
+  text-transform: uppercase;
+  color: #111;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  line-height: 24px;
+  text-decoration: none;
+}
+.popup_body h5 {
+  text-transform: uppercase;
+  color: #111;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.popup-footer a {
+  background: transparent;
+  border-radius: 50px!important;
+  border-color: #111;
+  color: #111;
+  font-family: Poppins;
+  text-transform: uppercase;
+  transition: .5s all;
+  max-width: 100%;
+  margin: 20px auto 0px;
+  border: 1px solid;
+  min-height: 30px;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 0px 20px;
+  display: block;
+}
+
+.popup-footer a button {
+  background: transparent;
+  border: 0px;
+  padding: 0px;
+  font-family: poppins;
+  font-weight: 600;
+}
+
+.popup-footer a button:hover {
+  background: transparent;
+}
+
+.popup-footer a:hover {
+  background: #000;
+  color: #fff;
+}
+
+.popup-footer a:hover button {
+  color: #fff !important;
+}
+/* popu-end */
+.color-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+  border: 2px solid #fff;
+}
+
+.color-circle:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.color-box {
+  width: 50px;
+  height: 50px;
+  background-color: #eee;
+  border: 2px solid #000;
+}
+/* cololabs_sec */
+.cololabs_sec h1 {
+  font-size: 50px;
+  font-weight: 600;
+  font-family: Poppins;
+  text-align: center;
+  margin: 0;
+}
+
+.cololabs_sec h1 span {
+  font-weight: 600;
+  color: #dc41a1;
+}
+.chooseby_trend h3.trend-item{
+  margin: 0px !important;
+  padding: 0px !important;
+  font-size: 20px;
+  line-height: 20px;
+  cursor: pointer;
+}
+.tabs_click button{
+  font-weight: 400;
+  font-size: 24px;
+  font-family: Poppins;
+  transition: .5s all;
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+  list-style: none;
+  line-height: 24px;
+  min-width: 160px;
+  text-decoration: none;
+  color: #111;
+  transition: .5s all;
+}
+.tabs_click button:hover, .chooseby_trend h3.trend-item:hover {
+  font-weight: 700;
+  color: #d73078;
+}
+.tabs_click button.active, .chooseby_trend h3.trend-item.active {
+  font-weight: 700;
+  color: #d73078;
+  transition: .5s all;
+}
+
+.emoji-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 95%;
+  margin-bottom: 40px;
+}
+
+.cololabs_sec {
+  max-width: 100%;
+  padding: 0px;
+}
+
+.emoji-container p {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #ff3eac;
+  opacity: 0;
+  transition: .5s all;
+  padding: 5px 0px 0px;
+  position: absolute;
+  font-family: poppins;
+  bottom: -25px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 100%;
+  margin: 0px auto;
+}
+
+.emoji-container span.emoji:hover, .emoji-container span.emoji.active {
+  transform: translateY(-15px);
+}
+
+.emoji-container span.emoji:hover p, .emoji-container span.emoji.active p {
+  opacity: 1;
+}
+
+.emoji-container span.emoji {
+  transition: .5s all;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+.emoji-container span.emoji .emojii {
+  max-width: 60px;
+  margin: 0px auto;
+}
+p.bottom_emoji {
+  text-align: left;
+  color: #111;
+  font-size: 20px;
+  margin-top: 20px;
+  padding-bottom: 0;
+  max-width: 95%;
+  margin: 0px auto;
+}
+.color_labsec {
+  position: relative;
+}
+.emoji-container span.emoji img {
+  width: 100%;
+}
+
+.color-pallte {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: flex-start;
+  margin: 30px 0px 0px;
+}
+
+.color-pallte .col-12 button {
+  min-width: 100px;
+  min-height: 100px;
+  max-width: 100%;
+  margin: 0;
+  display: block!important;
+}
+.emoji-container span.emoji img {
+  width: 100%;
+}
+
+.color-pallte .coloors {
+  height: 100px;
+  min-width: 100px;
+  min-height: 100px;
+  margin: 0;
+  --shade-grid-height: 25%;
+  --shade-grid-width: 10%;
+  display: block;
+  flex-grow: 1;
+}
+
+.color-pallte .coloors button.btn {
+  border-radius: 0px;
+  transition: .5s all;
+  
+}
+.color-pallte .coloors:hover button.btn {
+  box-shadow: 3px 3px 24px #00000073;
+}
+h2.pick_mood {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  font-size: 32px;
+  color: #fff;
+  font-family: Poppins;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  max-width: fit-content;
+  margin: 0px auto;
+}
+.chooseby_trend {
+  justify-content: center;
+  margin: 20px 0px 0px !important
+}
+
+.chooseby_trend h3.trend-item {
+  font-size: 18px;
+  line-height: 14px;
+}
+
+.chooseby_trend  span {
+  font-size: 14px;
+  line-height: 11px;
+}
+/* cololabs_sec */
+
+@media (max-width:1440px){
+  .emoji-container span.emoji .emojii {
+    max-width: 40px;
+    margin: 0px auto;
+  }
+  .cololabs_sec h1 {
+    font-size: 36px;
+}
+.tabs_click button  {
+  font-size: 20px;
+  line-height: 20px;
+}
+}
+@media (max-width:767px){
+  .emoji-container p {
+    text-wrap: nowrap;
+    margin: 0 auto;
+    text-align: center;
+    top: unset;
+    position: absolute!important;
+    bottom: -20px;
+    font-size: 11px;
+    font-weight: 600;
+}
+.cololabs_sec {
+  max-width: 100%;
+  padding: 0px 10px;
+}
+.tabs_click {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 5px 0px 0px !important;
+  padding: 0px;
+}
+.tabs_click span.mx-2 {
+  margin: 0px !important;
+}
+.tabs_click button, .chooseby_trend h3.trend-item  {
+  margin: 0px;
+  padding: 0px;
+  max-width: 100%;
+  min-width: unset;
+}
+.tabs_click button, .chooseby_trend h3.trend-item  {
+  font-size: 14px;
+  line-height: 14px;
+}
+.cololabs_sec h1 {
+  font-size: 28px;
+}
+.emoji-container span.emoji:hover, .emoji-container span.emoji.active {
+  transform: translateY(-10px);
+}
+.emoji-container {
+  gap: 2px;
+  margin-bottom: 0px;
+  max-width: 100%;
+}
+p.bottom_emoji {
+  display: none;
+}
+.chooseby_trend {
+  align-items: center;
+  justify-content: flex-start;
+  overflow-x: auto;
+  gap: 10px;
+}
+.chooseby_trend h3.trend-item {
+  font-size: 14px !important;
+  line-height: 14px !important;
+  min-width: 150px;
+}
+.chooseby_trend {
+  margin: 10px 0px 0px !important;
+  padding-bottom: 10px;
+}
+}
+@media (max-width:375px){
+  .emoji-container p {
+    margin: 0 auto;
+    text-align: center;
+    top: unset;
+    position: absolute!important;
+    bottom: -18px;
+    font-size: 8px;
+    font-weight: 600;
+    min-width: 45px;
+    left: -7px;
+    word-break: break-all;
+}
+.chooseby_trend h3.trend-item {
+  font-size: 13px !important;
+  line-height: 13px !important;
+  min-width: 150px;
+}
+}
