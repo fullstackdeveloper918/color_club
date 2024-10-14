@@ -393,9 +393,12 @@ const Home = () => {
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
+              {showModal===false?
+              <>
               {!isHovered && (
                 <h2 className="pick_mood">Pick A Mood To Find Your Colors</h2>
               )}
+              </>:""}
               <div className="color-pallte">
                 {colors.length > 0
                   ? colors.map((color: any, index: any) => (
