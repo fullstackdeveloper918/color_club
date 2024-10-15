@@ -1,56 +1,55 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import varientData from "../constant/variant.json";
+const ProductCombine = () => {
+    const [selectedProducts, setSelectedProducts] = useState([]);
 
-const ProductDetail = () => {
-  const [selectedProducts, setSelectedProducts] = useState([]);
-
-  useEffect(() => {
-    const products = localStorage.getItem("selectedProducts");
-    if (products) {
-      setSelectedProducts(JSON.parse(products));
-    }
-  }, []);
-  console.log(selectedProducts, "sdfasdfasdffasdf");
-  const colors = varientData?.varient;
-  console.log(colors, "kkkkkk");
-  const [selectedColor, setSelectedColor] = useState<any>(null);
-  const [modalVisible, setModalVisible] = useState(false);
-  console.log(selectedColor, "selectedColor");
-
-  const handleColorClick = (color: any) => {
-    setSelectedColor(color);
-    setModalVisible(true);
-  };
-
-  const handleCloseModal = () => {
-    setModalVisible(false);
-    setSelectedColor(null);
-  };
-  //   const handleSelectColor = () => {
-  //     const existingProductsString = localStorage.getItem('selectedProducts');
-  //     const existingProducts = existingProductsString ? JSON.parse(existingProductsString) : [];
-  //     existingProducts.push(selectedColor);
-  //     localStorage.setItem('selectedProducts', JSON.stringify(existingProducts));
-  //     setModalVisible(false);
-  // };
-  const handleSelectColor = () => {
-    const existingProductsString = localStorage.getItem("selectedProducts");
-    const existingProducts = existingProductsString
-      ? JSON.parse(existingProductsString)
-      : [];
-    existingProducts.push(selectedColor);
-    localStorage.setItem("selectedProducts", JSON.stringify(existingProducts));
-    setSelectedProducts(existingProducts);
-    setModalVisible(false);
-  };
-  const handleRemoveColor = (index: any) => {
-    const updatedProducts = selectedProducts.filter((_, i) => i !== index);
-    localStorage.setItem("selectedProducts", JSON.stringify(updatedProducts));
-    setSelectedProducts(updatedProducts);
-  };
-  console.log(selectedProducts,"selectedProducts");
+    useEffect(() => {
+      const products = localStorage.getItem("selectedProducts");
+      if (products) {
+        setSelectedProducts(JSON.parse(products));
+      }
+    }, []);
+    console.log(selectedProducts, "sdfasdfasdffasdf");
+    const colors = varientData?.varient;
+    console.log(colors, "kkkkkk");
+    const [selectedColor, setSelectedColor] = useState<any>(null);
+    const [modalVisible, setModalVisible] = useState(false);
+    console.log(selectedColor, "selectedColor");
   
+    const handleColorClick = (color: any) => {
+      setSelectedColor(color);
+      setModalVisible(true);
+    };
+  
+    const handleCloseModal = () => {
+      setModalVisible(false);
+      setSelectedColor(null);
+    };
+    //   const handleSelectColor = () => {
+    //     const existingProductsString = localStorage.getItem('selectedProducts');
+    //     const existingProducts = existingProductsString ? JSON.parse(existingProductsString) : [];
+    //     existingProducts.push(selectedColor);
+    //     localStorage.setItem('selectedProducts', JSON.stringify(existingProducts));
+    //     setModalVisible(false);
+    // };
+    const handleSelectColor = () => {
+      const existingProductsString = localStorage.getItem("selectedProducts");
+      const existingProducts = existingProductsString
+        ? JSON.parse(existingProductsString)
+        : [];
+      existingProducts.push(selectedColor);
+      localStorage.setItem("selectedProducts", JSON.stringify(existingProducts));
+      setSelectedProducts(existingProducts);
+      setModalVisible(false);
+    };
+    const handleRemoveColor = (index: any) => {
+      const updatedProducts = selectedProducts.filter((_, i) => i !== index);
+      localStorage.setItem("selectedProducts", JSON.stringify(updatedProducts));
+      setSelectedProducts(updatedProducts);
+    };
+    console.log(selectedProducts,"selectedProducts");
+    
   return (
     <div className="container mt-5 ">
       {/* Heading */}
@@ -256,9 +255,81 @@ const ProductDetail = () => {
         </div>
 
       </div>
-<Link className="justify-content-center mt-5 items-center" to={`/product-color-combination`}>
-<button className="items-center">VIEW MY COLOR THEME FOR TODAY</button>
-</Link>
+
+      <div className="container mt-5">
+      <div className="row">
+        {/* Left Section with User Info */}
+        <div className="col-md-2 col-sm-12 text-center">
+              <img
+                src="https://via.placeholder.com/100" // Replace with the actual image
+                alt="Bessie Nail Artist"
+                className="rounded-circle"
+              />
+              <p className="mt-2 mb-1">Beetles Nail Artist</p>
+              <h5 style={{color:"#dc41a1"}}>Bessie</h5>
+            </div>
+        <div className="col-md-4 text-center text-black">
+          <h2>Congratulations! 😄</h2>
+          <p>
+            You’ve found the color that suits your mood today. Many people use colors
+            associated with happiness to create their nails! You can draw inspiration
+            from that. We included the colors in the Boett’s combination kit, which
+            includes gels in a wide range of colors and some tools. This way, you can
+            experiment with different colors every day!
+          </p>
+          <h5>Jessica</h5>
+        </div>
+
+        {/* Right Section with Product Info */}
+        <div className="col-md-4 d-flex">
+          <div className="card mb-3 text-center ">
+            {selectedProducts?.map((res:any)=>
+            <div className="card-body ">
+               <div className="text-center">
+                <img
+                  src={res?.image} // Replace with actual image
+                  alt="Color 1"
+                  className="rounded"
+                />
+                <h6 className="text-black">{res?.name}</h6>
+                
+              </div>
+            </div>
+            )}
+          </div>
+
+          {/* <div className="card text-center">
+            <div className="card-body">
+              <h5 className="card-title">ALL IN ONE KIT</h5>
+              <button className="btn btn-secondary">SEE MORE</button>
+            </div>
+          </div> */}
+        </div>
+      </div>
+
+      {/* Colors Section */}
+      <h3 className="text-center mt-4">See what colors make others happy</h3>
+      <div className="row mt-3">
+        <div className="col-6 col-md-4">
+          <img src="https://9c35bd-26.myshopify.com/cdn/shop/articles/p_2674_large.png?v=1728451468" style={{height:"150px", width:"150px"}} alt="Color1" className="img-fluid" />
+        </div>
+        <div className="col-6 col-md-4">
+          <img src="https://9c35bd-26.myshopify.com/cdn/shop/articles/p_2674_large.png?v=1728451468" style={{height:"150px", width:"150px"}} alt="Color2" className="img-fluid" />
+        </div>
+        <div className="col-6 col-md-4">
+          <img src="https://9c35bd-26.myshopify.com/cdn/shop/articles/p_3066_large.png?v=1728451244" style={{height:"150px", width:"150px"}} alt="Color3" className="img-fluid" />
+        </div>
+        <div className="col-6 col-md-4">
+          <img src="https://9c35bd-26.myshopify.com/cdn/shop/articles/p_2674_large.png?v=1728451468" style={{height:"150px", width:"150px"}} alt="Color4" className="img-fluid" />
+        </div>
+        <div className="col-6 col-md-4">
+          <img src="https://9c35bd-26.myshopify.com/cdn/shop/articles/p_2635.png?v=1728451140" style={{height:"150px", width:"150px"}} alt="Color5" className="img-fluid" />
+        </div>
+        <div className="col-6 col-md-4">
+          <img src="https://9c35bd-26.myshopify.com/cdn/shop/articles/p_3066.png?v=1728451244" style={{height:"150px", width:"150px"}} alt="Color6" className="img-fluid" />
+        </div>
+      </div>
+    </div>
       </div>
 
       {/* Color Picker Section */}
@@ -295,7 +366,7 @@ const ProductDetail = () => {
      
       {/* {modalVisible && <div className="modal-backdrop fade show" onClick={handleCloseModal}></div>} */}
     </div>
-  );
-};
+  )
+}
 
-export default ProductDetail;
+export default ProductCombine

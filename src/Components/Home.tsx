@@ -110,95 +110,95 @@ const Home = () => {
     mood: "Happy",
     products: [
       {
-        id: "Product 001",
-        name: "Canary Yellow #a649 |15ml Gel Polish",
-        link: "https://9c35bd-26.myshopify.com/products/gel-nail-polish-15ml-cl345",
-        image:
-          "https://9c35bd-26.myshopify.com/cdn/shop/files/93a50e3355cf4ab8923e8fff9f18a726_compact.jpg",
-        color_name: "Super Lemon",
-        hex_code: "#F9DC24",
+        "id": "Product 001",
+        "name": "Canary Yellow #a649 |15ml Gel Polish",
+        "link": "https://9c35bd-26.myshopify.com/products/gel-nail-polish-15ml-cl345",
+        "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/93a50e3355cf4ab8923e8fff9f18a726_compact.jpg",
+        "color_name": "Super Lemon",
+        "hex_code": "#F9DC24",
+        "varient_id":"49246359421274"
       },
       {
-        id: "Product 002",
-        name: "Vannilla Frosting #a809 |15ml Gel Polish",
-        link: "https://9c35bd-26.myshopify.com/products/vannilla-frosting-15ml-gel-polish",
-        image:
-          "https://9c35bd-26.myshopify.com/cdn/shop/files/93a50e3355cf4ab8923e8fff9f18a726_compact.jpg",
-        color_name: "Lemon Verbena",
-        hex_code: "#F3E792",
+        "id": "Product 002",
+        "name": "Vannilla Frosting #a809 |15ml Gel Polish",
+        "link": "https://9c35bd-26.myshopify.com/products/vannilla-frosting-15ml-gel-polish",
+        "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/93a50e3355cf4ab8923e8fff9f18a726_compact.jpg",
+        "color_name": "Lemon Verbena",
+        "hex_code": "#F3E792",
+         "varient_id" : "34678668778"
       },
       {
-        id: "Product 005",
-        name: "Clara Ochre #a247 |15ml Gel Polish",
-        link: "https://9c35bd-26.myshopify.com/products/clara-ochre",
-        image:
-          "https://9c35bd-26.myshopify.com/cdn/shop/files/e65d12e815b64180942be1c5517d4751_compact.jpg",
-        color_name: "Elfin Yellow",
-        hex_code: "#E8B51A",
+        "id": "Product 005",
+        "name": "Clara Ochre #a247 |15ml Gel Polish",
+        "link": "https://9c35bd-26.myshopify.com/products/clara-ochre",
+        "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/e65d12e815b64180942be1c5517d4751_compact.jpg",
+        "color_name": "Elfin Yellow",
+        "hex_code": "#E8B51A",
+        "varient_id":"49246356439386"
       },
       {
-        id: "Product 006",
-        name: "Beetles Cat Eye Gel Polish: Chameleon Magic Effect, 15ML Nail Soak Off UV Gel",
-        link: "https://9c35bd-26.myshopify.com/products/saturn-b740-cat-eye-15ml-gel-polish",
-        image:
-          "https://9c35bd-26.myshopify.com/cdn/shop/files/48875e067933456cbc30e438e2d908dd_compact.jpg",
-        color_name: "Buttercup",
-        hex_code: "#F3B71B",
+        "id": "Product 006",
+        "name": "Beetles Cat Eye Gel Polish: Chameleon Magic Effect, 15ML Nail Soak Off UV Gel",
+        "link": "https://9c35bd-26.myshopify.com/products/saturn-b740-cat-eye-15ml-gel-polish",
+        "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/48875e067933456cbc30e438e2d908dd_compact.jpg",
+        "color_name": "Buttercup",
+        "hex_code": "#F3B71B",
+        "varient_id":"49246387634522"
       },
       {
-        id: "Product 008",
-        name: "Glitter Orange Glow in the Dark |15ml Nail Gel Polish",
-        link: "https://9c35bd-26.myshopify.com/products/glitter-orange-glow-in-the-dark-15ml-nail-gel-polish",
-        image:
-          "https://9c35bd-26.myshopify.com/cdn/shop/files/93a50e3355cf4ab8923e8fff9f18a726_compact.jpg",
-        color_name: "Sunshine Orange",
-        hex_code: "#FFA400",
+        "id": "Product 008",
+        "name": "Glitter Orange Glow in the Dark |15ml Nail Gel Polish",
+        "link": "https://9c35bd-26.myshopify.com/products/glitter-orange-glow-in-the-dark-15ml-nail-gel-polish",
+        "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/93a50e3355cf4ab8923e8fff9f18a726_compact.jpg",
+        "color_name": "Sunshine Orange",
+        "hex_code": "#FFA400",
+        "varient_id":""
       },
       {
-        id: "Product 009",
-        name: "Champagne Gold#b545 |15ml Gel Polish",
-        link: "https://9c35bd-26.myshopify.com/products/champagne-gold-b545-15ml-gel-polish",
-        image:
-          "https://9c35bd-26.myshopify.com/cdn/shop/files/050b91679aa64b578367a62319d1ed50_compact.jpg",
-        color_name: "Pale Gold",
-        hex_code: "#E3C565",
+        "id": "Product 009",
+        "name": "Champagne Gold#b545 |15ml Gel Polish",
+        "link": "https://9c35bd-26.myshopify.com/products/champagne-gold-b545-15ml-gel-polish",
+        "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/050b91679aa64b578367a62319d1ed50_compact.jpg",
+        "color_name": "Pale Gold",
+        "hex_code": "#E3C565",
+        "varient_id":"49246359781722"
       },
       {
-        id: "Product 010",
-        name: "Confetti Party #b574 |15ml Gel Polish",
-        link: "https://9c35bd-26.myshopify.com/products/confetti-party-b574-15ml-crystal-colorful-confetti-gel-polish",
-        image:
-          "https://9c35bd-26.myshopify.com/cdn/shop/files/1e68a695d69f497f8e02019883ad78e6_compact.png",
-        color_name: "Warm Apricot",
-        hex_code: "#FFC88F",
+        "id": "Product 010",
+        "name": "Confetti Party #b574 |15ml Gel Polish",
+        "link": "https://9c35bd-26.myshopify.com/products/confetti-party-b574-15ml-crystal-colorful-confetti-gel-polish",
+        "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/1e68a695d69f497f8e02019883ad78e6_compact.png",
+        "color_name": "Warm Apricot",
+        "hex_code": "#FFC88F",
+        "varient_id":"49246356734298"
       },
       {
-        id: "Product 014",
-        name: "Lemon Chiffon #a735 |15ml Gel Polish",
-        link: "https://9c35bd-26.myshopify.com/products/lemon-chiffon-15ml-gel-polish-1",
-        image:
-          "https://9c35bd-26.myshopify.com/cdn/shop/files/93a50e3355cf4ab8923e8fff9f18a726_compact.jpg",
-        color_name: "Creamy Daffodil",
-        hex_code: "#FFEC84",
+        "id": "Product 014",
+        "name": "Lemon Chiffon #a735 |15ml Gel Polish",
+        "link": "https://9c35bd-26.myshopify.com/products/lemon-chiffon-15ml-gel-polish-1",
+        "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/93a50e3355cf4ab8923e8fff9f18a726_compact.jpg",
+        "color_name": "Creamy Daffodil",
+        "hex_code": "#FFEC84",
+        "varient_id":""
       },
       {
-        id: "Product 016",
-        name: "Pearlescent Champagne#d037 |15ml Gel Polish",
-        link: "https://9c35bd-26.myshopify.com/products/pearlescent-champagne-d037-15ml-gel-polish",
-        image:
-          "https://9c35bd-26.myshopify.com/cdn/shop/files/93a50e3355cf4ab8923e8fff9f18a726_compact.jpg",
-        color_name: "Golden Cream",
-        hex_code: "#F3E5AB",
+        "id": "Product 016",
+        "name": "Pearlescent Champagne#d037 |15ml Gel Polish",
+        "link": "https://9c35bd-26.myshopify.com/products/pearlescent-champagne-d037-15ml-gel-polish",
+        "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/93a50e3355cf4ab8923e8fff9f18a726_compact.jpg",
+        "color_name": "Golden Cream",
+        "hex_code": "#F3E5AB",
+        "varient_id":""
       },
       {
-        id: "Product 017",
-        name: "Tammy Tangerine #a467 |15ml Gel Polish",
-        link: "https://9c35bd-26.myshopify.com/products/gel-nail-polish-15ml-cl303",
-        image:
-          "https://9c35bd-26.myshopify.com/cdn/shop/files/93a50e3355cf4ab8923e8fff9f18a726_compact.jpg",
-        color_name: "Orange Zest",
-        hex_code: "#FB9902",
-      },
+        "id": "Product 017",
+        "name": "Tammy Tangerine #a467 |15ml Gel Polish",
+        "link": "https://9c35bd-26.myshopify.com/products/gel-nail-polish-15ml-cl303",
+        "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/93a50e3355cf4ab8923e8fff9f18a726_compact.jpg",
+        "color_name": "Orange Zest",
+        "hex_code": "#FB9902",
+        "varient_id":"49246373642586"
+      }
     ],
   };
   const emojis = [
