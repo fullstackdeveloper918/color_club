@@ -152,7 +152,7 @@ const ProductCombine = () => {
                 a unique, visually pleasing nail design. Explore new styles and
                 bring joy to your nails!
               </p> 
-              <button className="whitBtn">Add to product to bag</button>
+              <button className="whitBtn">Add all product to bag</button>
               <div className="d-flex justify-content-between">
 
 <button  className="tryBtn">Try Again</button>
