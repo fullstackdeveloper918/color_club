@@ -126,14 +126,13 @@ const ProductCombine = () => {
           </div>
         <div className=" bg-dark p-5 rounded position-relative p-sm-3 innerProductPopup w-100">
           <div className="row ">
-            <div className="col-md-3 col-sm-12 text-center">
-              <img
-                src="https://via.placeholder.com/100" // Replace with the actual image
-                alt="Bessie Nail Artist"
-                className="rounded-circle"
-              />
-              <p className="mt-2 mb-1">Beetles Nail Artist</p>
-              <h5 style={{color:"#dc41a1"}}>Bessie</h5>
+            <div className=" ">
+             <div className="colorsWrapper mb-3">
+              <div className="color1"></div>
+              <div className="color2"></div>
+             </div>
+              <h6 className="mt-2 mb-1">Color theme for today</h6>
+              <h2 >Joyfull</h2>
             </div>
             <div className="col-md-9 col-sm-12">
               <p>
@@ -257,32 +256,33 @@ const ProductCombine = () => {
       </div>
 
       <div className="container mt-5">
-      <div className="row">
+      <div className="flexBox">
         {/* Left Section with User Info */}
-        <div className="col-md-2 col-sm-12 text-center">
+        <div className="colo-md-6 flexBox pt-5" style={{boxShadow:"none", border:"0", background:"#F5F5F5"}}>
+          <div className="col-md-3 col-sm-12 text-center">
               <img
                 src="https://via.placeholder.com/100" // Replace with the actual image
                 alt="Bessie Nail Artist"
                 className="rounded-circle"
               />
-              <p className="mt-2 mb-1">Beetles Nail Artist</p>
+              <p className="mt-2 mb-1 text-black">Beetles Nail Artist</p>
               <h5 style={{color:"#dc41a1"}}>Bessie</h5>
-            </div>
-        <div className="col-md-4 text-center text-black">
-          <h2>Congratulations! 😄</h2>
-          <p>
+              </div>
+       <div>
+          <h2 style={{color:"#000"}}>Congratulations! 😄</h2>
+          <p style={{color:"#000"}}>
             You’ve found the color that suits your mood today. Many people use colors
             associated with happiness to create their nails! You can draw inspiration
             from that. We included the colors in the Boett’s combination kit, which
             includes gels in a wide range of colors and some tools. This way, you can
             experiment with different colors every day!
           </p>
-          <h5>Jessica</h5>
+          </div>
         </div>
 
         {/* Right Section with Product Info */}
-        <div className="col-md-4 d-flex">
-          <div className="card mb-3 text-center ">
+        <div className="col-md-6 col-sm-12">
+          <div className="card mb-3 text-center flexRow ">
             {selectedProducts?.map((res:any)=>
             <div className="card-body ">
                <div className="text-center">
@@ -309,25 +309,39 @@ const ProductCombine = () => {
 
       {/* Colors Section */}
       <h3 className="text-center mt-4">See what colors make others happy</h3>
-      <div className="row mt-3">
-        <div className="col-6 col-md-4">
-          <img src="https://9c35bd-26.myshopify.com/cdn/shop/articles/p_2674_large.png?v=1728451468" style={{height:"150px", width:"150px"}} alt="Color1" className="img-fluid" />
+      <div className=" mt-3 gridBox">
+        <div className="">
+         
+          <img src="https://9c35bd-26.myshopify.com/cdn/shop/articles/p_2674_large.png?v=1728451468" alt="Color1" className="img-fluid" />
+       
         </div>
-        <div className="col-6 col-md-4">
-          <img src="https://9c35bd-26.myshopify.com/cdn/shop/articles/p_2674_large.png?v=1728451468" style={{height:"150px", width:"150px"}} alt="Color2" className="img-fluid" />
+        <div className="">
+         
+          <img src="https://9c35bd-26.myshopify.com/cdn/shop/articles/p_2674_large.png?v=1728451468" alt="Color1" className="img-fluid" />
+       
         </div>
-        <div className="col-6 col-md-4">
-          <img src="https://9c35bd-26.myshopify.com/cdn/shop/articles/p_3066_large.png?v=1728451244" style={{height:"150px", width:"150px"}} alt="Color3" className="img-fluid" />
+        <div className="">
+         
+          <img src="https://9c35bd-26.myshopify.com/cdn/shop/articles/p_2674_large.png?v=1728451468" alt="Color1" className="img-fluid" />
+       
         </div>
-        <div className="col-6 col-md-4">
-          <img src="https://9c35bd-26.myshopify.com/cdn/shop/articles/p_2674_large.png?v=1728451468" style={{height:"150px", width:"150px"}} alt="Color4" className="img-fluid" />
+        <div className="">
+         
+          <img src="https://9c35bd-26.myshopify.com/cdn/shop/articles/p_2674_large.png?v=1728451468" alt="Color1" className="img-fluid" />
+       
         </div>
-        <div className="col-6 col-md-4">
-          <img src="https://9c35bd-26.myshopify.com/cdn/shop/articles/p_2635.png?v=1728451140" style={{height:"150px", width:"150px"}} alt="Color5" className="img-fluid" />
+        <div className="">
+         
+          <img src="https://9c35bd-26.myshopify.com/cdn/shop/articles/p_2674_large.png?v=1728451468" alt="Color1" className="img-fluid" />
+       
         </div>
-        <div className="col-6 col-md-4">
-          <img src="https://9c35bd-26.myshopify.com/cdn/shop/articles/p_3066.png?v=1728451244" style={{height:"150px", width:"150px"}} alt="Color6" className="img-fluid" />
+        <div className="">
+         
+          <img src="https://9c35bd-26.myshopify.com/cdn/shop/articles/p_2674_large.png?v=1728451468" alt="Color1" className="img-fluid" />
+       
         </div>
+        
+        
       </div>
     </div>
       </div>
