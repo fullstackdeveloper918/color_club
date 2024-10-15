@@ -69,6 +69,12 @@
   top: 20px;
   height: fit-content;
 }
+.innerProductPopup {
+  position: relative;
+}
+.color-pailet>div.col .color-circle {
+  display: block !important;
+}
 .popup_productheader {
   text-align: right;
   cursor: pointer;
@@ -151,12 +157,12 @@
 }
 /* popu-end */
 .color-circle {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin: 0 10px;
-  cursor: pointer;
   border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 50px !important;
+  margin: 0 10px;
+  width: 50px !important;
 }
 
 .color-circle:hover {

@@ -49,6 +49,8 @@ const ProductDetail = () => {
     localStorage.setItem("selectedProducts", JSON.stringify(updatedProducts));
     setSelectedProducts(updatedProducts);
   };
+  console.log(selectedProducts,"selectedProducts");
+  
   return (
     <div className="container mt-5 ">
       {/* Heading */}
@@ -57,7 +59,7 @@ const ProductDetail = () => {
           <h1 className="mb-3 ">
             Find Your <span>Colors</span> Today
           </h1>
-          <div className="mt-4 tabs_click">
+          <div className="mt-4 tabs_click" aria-disabled>
           <button
             className={`btn btn-link active`}
             // onClick={() => handleTabChange("emotions")}
@@ -65,12 +67,14 @@ const ProductDetail = () => {
             Choose by Emotions
           </button>
           <span className="mx-2">|</span>
+          <Link to={`/`}>
           <button
             className={`btn btn-link `}
             // onClick={() => handleTabChange("trends")}
-          >
+            >
             Choose by Trends
           </button>
+            </Link>
         </div>
         </div>
       </div>
@@ -113,7 +117,7 @@ const ProductDetail = () => {
                 
               </div>
             
-             <button className="btn btn-outline-secondary btn-sm mt-4 btnCart">
+             <button className="btn btn-outline-secondary btn-sm mt-4 btnCart" data-varient-id={res?.varient_id}>
                 ADD TO BAG
               </button>
               </div>
@@ -175,8 +179,8 @@ const ProductDetail = () => {
             </button>
           </div>
         </div> */}
-          <div className="row text-center mt-4">
-            
+          <div className="row text-center mt-4 color-pailet">
+            {selectedProducts?.length <2?
             <div className="col">
               <div className="d-flex justify-content-center">
                 {colors.length > 0
@@ -193,7 +197,7 @@ const ProductDetail = () => {
               {/* <button className="btn btn-link mt-3" style={{ color: "#f06" }}>
                 I Just Want One Color <span>&gt;</span>
               </button> */}
-            </div>
+            </div>:""}
           </div>
           {/* model move  */}
 
