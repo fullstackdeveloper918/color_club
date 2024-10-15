@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import varientData from "../constant/variant.json";
 const ProductCombine = () => {
-    const [selectedProducts, setSelectedProducts] = useState([]);
+    const [selectedProducts, setSelectedProducts] = useState<any>([]);
 
     useEffect(() => {
       const products = localStorage.getItem("selectedProducts");
@@ -44,7 +44,7 @@ const ProductCombine = () => {
       setModalVisible(false);
     };
     const handleRemoveColor = (index: any) => {
-      const updatedProducts = selectedProducts.filter((_, i) => i !== index);
+      const updatedProducts = selectedProducts.filter((_:any, i:number) => i !== index);
       localStorage.setItem("selectedProducts", JSON.stringify(updatedProducts));
       setSelectedProducts(updatedProducts);
     };
@@ -128,19 +128,28 @@ const ProductCombine = () => {
           <div className="row ">
             <div className=" ">
              <div className="colorsWrapper mb-3">
-              <div className="color1"></div>
-              <div className="color2"></div>
+             <div className="color1" style={{backgroundColor:`${selectedProducts[0]?.hex_code}`}}></div>
+             <div className="color2" style={{backgroundColor:`${selectedProducts[1]?.hex_code}`}}></div>
              </div>
               <h6 className="mt-2 mb-1">Color theme for today</h6>
               <h2 >Joyfull</h2>
             </div>
-            <div className="col-md-9 col-sm-12">
+            <div className=" col-sm-12">
               <p>
               Hey, I'm Bessie, your local nail artist! Choose Mysterious
                 Delight for a fabulous look. Mix it with other colors to create
                 a unique, visually pleasing nail design. Explore new styles and
                 bring joy to your nails!
-              </p>
+              </p> 
+              <button className="whitBtn">Add to product to bag</button>
+              <div className="d-flex justify-content-between">
+
+<button  className="tryBtn">Try Again</button>
+<button className="tryBtn">SHARE</button>
+
+              </div>
+              <button className="pinkBtn">Share Color Today</button>
+              <button className="pinkBtn">Add Color Today</button>
             </div>
           </div>
 
@@ -281,8 +290,8 @@ const ProductCombine = () => {
         </div>
 
         {/* Right Section with Product Info */}
-        <div className="col-md-6 col-sm-12">
-          <div className="card mb-3 text-center flexRow ">
+        <div className="col-md-6 col-sm-12 p-3" style={{boxShadow:"none", border:"0", background:"#F5F5F5"}}>
+          <div className="card mb-3 text-center flexRow border-0">
             {selectedProducts?.map((res:any)=>
             <div className="card-body ">
                <div className="text-center">
@@ -294,6 +303,10 @@ const ProductCombine = () => {
                 <h6 className="text-black">{res?.name}</h6>
                 
               </div>
+              <button className="btn btn-outline-secondary btn-sm mt-4 btnCart" >
+              <input type="hidden" className="varient_id" value={res?.varient_id} />
+                ADD TO BAG
+              </button>
             </div>
             )}
           </div>
@@ -308,34 +321,34 @@ const ProductCombine = () => {
       </div>
 
       {/* Colors Section */}
-      <h3 className="text-center mt-4">See what colors make others happy</h3>
+      <h3 className="text-left mt-4 text-black">See what colors make others happy</h3>
       <div className=" mt-3 gridBox">
-        <div className="">
+        <div className="width50">
          
           <img src="https://9c35bd-26.myshopify.com/cdn/shop/articles/p_2674_large.png?v=1728451468" alt="Color1" className="img-fluid" />
        
         </div>
-        <div className="">
+        <div className="width50">
          
           <img src="https://9c35bd-26.myshopify.com/cdn/shop/articles/p_2674_large.png?v=1728451468" alt="Color1" className="img-fluid" />
        
         </div>
-        <div className="">
+        <div className="width50">
          
           <img src="https://9c35bd-26.myshopify.com/cdn/shop/articles/p_2674_large.png?v=1728451468" alt="Color1" className="img-fluid" />
        
         </div>
-        <div className="">
+        <div className="width50">
          
           <img src="https://9c35bd-26.myshopify.com/cdn/shop/articles/p_2674_large.png?v=1728451468" alt="Color1" className="img-fluid" />
        
         </div>
-        <div className="">
+        <div className="mobileNone width50">
          
           <img src="https://9c35bd-26.myshopify.com/cdn/shop/articles/p_2674_large.png?v=1728451468" alt="Color1" className="img-fluid" />
        
         </div>
-        <div className="">
+        <div className="mobileNone width50">
          
           <img src="https://9c35bd-26.myshopify.com/cdn/shop/articles/p_2674_large.png?v=1728451468" alt="Color1" className="img-fluid" />
        
