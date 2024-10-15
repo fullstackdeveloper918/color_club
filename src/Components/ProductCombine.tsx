@@ -49,7 +49,17 @@ const ProductCombine = () => {
       setSelectedProducts(updatedProducts);
     };
     console.log(selectedProducts,"selectedProducts");
-    
+    const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 767);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <div className="container mt-5 ">
       {/* Heading */}
@@ -92,6 +102,7 @@ const ProductCombine = () => {
       {/* Nail Artist Profile */}
       <div className="row justify-content-center text-white mt-3">
         <div className="d-flex gap-3  mediumResponsive">
+            {!isMobile?
         <div className="flexBox">
         {selectedProducts.slice(0,2).map((res: any, index: number) => (
             <div className="colo-md-6">
@@ -123,7 +134,7 @@ const ProductCombine = () => {
               </div>
             </div>
           ))}
-          </div>
+          </div>:""}
         <div className=" bg-dark p-5 rounded position-relative p-sm-3 innerProductPopup w-100">
           <div className="row ">
             <div className=" ">
@@ -267,7 +278,7 @@ const ProductCombine = () => {
       <div className="container mt-5">
       <div className="flexBox">
         {/* Left Section with User Info */}
-        <div className="colo-md-6 flexBox pt-5" style={{boxShadow:"none", border:"0", background:"#F5F5F5"}}>
+        <div className="colo-lg-6  flexBox pt-5" style={{boxShadow:"none", border:"0", background:"#F5F5F5"}}>
           <div className="col-md-3 col-sm-12 text-center">
               <img
                 src="https://via.placeholder.com/100" // Replace with the actual image
@@ -290,6 +301,7 @@ const ProductCombine = () => {
         </div>
 
         {/* Right Section with Product Info */}
+        {!isMobile?
         <div className="col-md-6 col-sm-12 p-3" style={{boxShadow:"none", border:"0", background:"#F5F5F5"}}>
           <div className="card mb-3 text-center flexRow border-0">
             {selectedProducts?.map((res:any)=>
@@ -317,7 +329,7 @@ const ProductCombine = () => {
               <button className="btn btn-secondary">SEE MORE</button>
             </div>
           </div> */}
-        </div>
+        </div>:""}
       </div>
 
       {/* Colors Section */}

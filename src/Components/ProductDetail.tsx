@@ -256,8 +256,8 @@ const ProductDetail = () => {
         </div>
 
       </div>
-<Link className="justify-content-center mt-5 items-center" to={`/product-color-combination`}>
-<button className="items-center">VIEW MY COLOR THEME FOR TODAY</button>
+<Link className="justify-content-center mt-5 items-center " to={`/product-color-combination`}>
+<button className="items-center btnCart">VIEW MY COLOR THEME FOR TODAY</button>
 </Link>
       </div>
 

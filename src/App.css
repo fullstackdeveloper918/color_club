@@ -563,8 +563,9 @@ p.bottom_emoji {
   text-decoration: none;
 }
 .gridBox{
-  grid-template-columns: repeat(4, 4fr);
+  grid-template-columns: repeat(2, 2fr);
   overflow: hidden;
+  margin:  0 20px 0 0;
 }
 .color1{
   height: 90px;  
@@ -583,17 +584,13 @@ p.bottom_emoji {
   left: 0;
   margin-left: 60px;
 }
-.gridBox{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
+
 .mobileNone{
   display: none;
 }
-.width50{
+/* .width50{
   width: 47.5%;
-}
+} */
 
 }
 @media (min-width:575px){
