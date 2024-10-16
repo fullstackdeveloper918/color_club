@@ -297,7 +297,7 @@ useEffect(() => {
               {/* Backdrop */}
               <div className="col-md-9 col-sm-12">
                 <p>
-                  Hey, I'm {asd}, your local nail artist! Choose Mysterious
+                  Hey, I'm Bessie, your local nail artist! Choose Mysterious
                   Delight for a fabulous look. Mix it with other colors to
                   create a unique, visually pleasing nail design. Explore new
                   styles and bring joy to your nails!
