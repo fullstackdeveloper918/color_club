@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import varientData from "../constant/variant.json";
 const ProductCombine = () => {
   const [selectedProducts, setSelectedProducts] = useState<any>([]);
@@ -64,6 +64,11 @@ const ProductCombine = () => {
   }, []);
   const artist:any = localStorage.getItem("artist");
   let asd=JSON.parse(artist)
+
+  const navigate = useNavigate();
+  const push=()=>{
+    navigate(`/cart`)
+  }
   return (
     <div className="container mt-5 ">
       {/* Heading */}
@@ -172,12 +177,23 @@ const ProductCombine = () => {
                   create a unique, visually pleasing nail design. Explore new
                   styles and bring joy to your nails!
                 </p>
-                <button className="whitBtn">Add all product to bag</button>
+                <a href="/cart" className="">
+                <button className="whitBtn" >Add all product to bag</button>
+                </a>
                 <div className="d-flex justify-content-between">
                   <a href="/" className="">
-                    <button className="tryBtn">Try Again</button>
+                    <button className="tryBtn tryagain">Try Again</button>
                   </a>
-                  <button className="tryBtn">SHARE</button>
+                  <div className="">
+                 
+                  <button className="tryBtn sharebtn">
+                  <input
+                          type="hidden"
+                          className="product_id"
+                          value={selectedProducts[0]?.link}
+                        />
+                    SHARE</button>
+                  </div>
                 </div>
                 <button className="pinkBtn">Share Color Today</button>
                 <button className="pinkBtn">Add Color Today</button>
