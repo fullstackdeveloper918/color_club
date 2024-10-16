@@ -22,39 +22,7 @@ const ProductDetail = () => {
     }
   }, []);
   const color1=varientData?.varient
-  console.log(selectedProducts, "sdfasdfasdffasdf");
-  const artist = localStorage.getItem("artist");
-  console.log(artist ==='Bessie', "Comparison Result with Bessie");
-  // const colors = varientData?.varient;
-//   let xyz = "Bessie";
-// console.log(xyz === `Bessie`, "Comparison Result with Bessie");
-  useEffect(() => {
-    const artist = localStorage.getItem("artist");
-    console.log(artist, "Current Artist"); // Log the artist
-let xyz="Beesie";
-    let selectedColors: any[] = [];
-    console.log(artist?.length, "Artist Length");
-    // console.log(xyz ===`Bessie`, "Comparison Result with Bessie");
-    console.log(artist === "Beatrise", "Comparison Result with Beatrise");
-    console.log(artist === "Bella", "Comparison Result with Bella");
-    // Logging the JSON data
-    console.log(varientData, "Variant Data");
-    console.log(beetriceData, "Beetrice Data");
-    console.log(bellaData, "Bella Data");
-    console.log(artist == "Bessie", "tyuertuie");
-
-    if (artist === "Bessie") {
-      selectedColors = varientData?.varient || [];
-    } else if (artist === "Beatrise") {
-      selectedColors = beetriceData.beetrice || [];
-    } else if (artist === "Bella") {
-      selectedColors = bellaData.bella || [];
-    }
-
-    console.log(selectedColors, "Colors from artist");
-    setColors(selectedColors);
-  }, []);
-  console.log(colors, "kkkkkk");
+  
   const [selectedColor, setSelectedColor] = useState<any>(null);
   const [modalVisible, setModalVisible] = useState(false);
   console.log(selectedColor, "selectedColor");
@@ -106,9 +74,11 @@ let xyz="Beesie";
 
   const handleArtistClick = (artist: string) => {
     console.log(artist, "uuu");
+    window.location.reload();
     localStorage.setItem("artist", JSON.stringify(artist));
     setSelectedArtist(artist);
     setIsModalOpen(false);
+    
   };
 
   // useEffect(() => {
@@ -117,6 +87,47 @@ let xyz="Beesie";
   //     setArtist(JSON.parse(products));
   //   }
   // }, []);
+
+  const artist:any = localStorage.getItem("artist");
+  let asd=JSON.parse(artist)
+console.log(asd,"asd");
+
+useEffect(() => {
+  const artist:any = localStorage.getItem("artist");
+  let artist1;
+
+  try {
+    artist1 = JSON.parse(artist);
+  } catch (e) {
+    console.error("Failed to parse artist from localStorage", e);
+    artist1 = null; // Handle parsing error
+  }
+
+  console.log(artist1, "Current Artist");
+
+  let selectedColors:any = [];
+  console.log(artist1?.length, "Artist Length");
+  
+  console.log(artist1 === "Beatrise", "Comparison Result with Beatrise");
+  console.log(artist1 === "Bella", "Comparison Result with Bella");
+  console.log(varientData, "Variant Data");
+  console.log(beetriceData, "Beetrice Data");
+  console.log(bellaData, "Bella Data");
+  console.log(artist1 === "Bessie", "tyuertuie");
+
+  if (artist1 === "Bessie") {
+      selectedColors = varientData.varient || [];
+  } else if (artist1 === "Beatrise") {
+      selectedColors = beetriceData.beetrice || [];
+  } else if (artist1 === "Bella") {
+      selectedColors = bellaData.bella || [];
+  }
+
+  console.log(selectedColors, "Colors from artist");
+  setColors(selectedColors);
+}, []);
+
+  console.log(colors, "kkkkkk");
   return (
     <div className="container mt-5 ">
       {/* Heading */}
@@ -206,7 +217,7 @@ let xyz="Beesie";
                   className="rounded-circle"
                 />
                 <p className="mt-2 mb-1">Beetles Nail Artist</p>
-                <h5 style={{ color: "#dc41a1" }}>{artist}</h5>
+                <h5 style={{ color: "#dc41a1" }}>{asd}</h5>
               </div>
 
               {/* Modal */}
@@ -222,7 +233,7 @@ let xyz="Beesie";
                     <div className="modal-content">
                       <div className="modal-header">
                         <h5 className="modal-title" id="bessieModalLabel">
-                          Bessie - Beetles Nail Artist
+                          {asd} - Beetles Nail Artist
                         </h5>
                         <button
                           type="button"
@@ -286,7 +297,7 @@ let xyz="Beesie";
               {/* Backdrop */}
               <div className="col-md-9 col-sm-12">
                 <p>
-                  Hey, I'm Bessie, your local nail artist! Choose Mysterious
+                  Hey, I'm {asd}, your local nail artist! Choose Mysterious
                   Delight for a fabulous look. Mix it with other colors to
                   create a unique, visually pleasing nail design. Explore new
                   styles and bring joy to your nails!
@@ -298,8 +309,8 @@ let xyz="Beesie";
               {selectedProducts?.length < 2 ? (
                 <div className="col">
                   <div className="d-flex justify-content-center">
-                    {color1.length > 0 ? (
-                      color1.map((color, index) => (
+                    {colors.length > 0 ? (
+                      colors.map((color, index) => (
                         <div
                           key={index}
                           className="color-circle"

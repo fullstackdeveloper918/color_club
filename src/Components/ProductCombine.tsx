@@ -62,7 +62,8 @@ const ProductCombine = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
+  const artist:any = localStorage.getItem("artist");
+  let asd=JSON.parse(artist)
   return (
     <div className="container mt-5 ">
       {/* Heading */}
@@ -166,7 +167,7 @@ const ProductCombine = () => {
               </div>
               <div className=" col-sm-12">
                 <p>
-                  Hey, I'm Bessie, your local nail artist! Choose Mysterious
+                  Hey, I'm {asd}, your local nail artist! Choose Mysterious
                   Delight for a fabulous look. Mix it with other colors to
                   create a unique, visually pleasing nail design. Explore new
                   styles and bring joy to your nails!
@@ -288,7 +289,7 @@ const ProductCombine = () => {
                   className="rounded-circle"
                 />
                 <p className="mt-2 mb-1 text-black">Beetles Nail Artist</p>
-                <h5 style={{ color: "#dc41a1" }}>Bessie</h5>
+                <h5 style={{ color: "#dc41a1" }}>{asd}</h5>
               </div>
               <div>
                 <h2 style={{ color: "#000" }}>Congratulations! 😄</h2>
