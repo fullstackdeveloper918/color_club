@@ -1,18 +1,59 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import varientData from "../constant/variant.json";
+import beetriceData from "../constant/beetrice.json";
+import bellaData from "../constant/bella.json";
+type ArtistImage = {
+  src: string;
+  name: string;
+};
 
+type ArtistImages = {
+  [key: string]: ArtistImage[];
+};
 const ProductDetail = () => {
   const [selectedProducts, setSelectedProducts] = useState([]);
-
+  const [colors, setColors] = useState<any[]>([]);
+  // const artist = localStorage.getItem("artist");
   useEffect(() => {
     const products = localStorage.getItem("selectedProducts");
     if (products) {
       setSelectedProducts(JSON.parse(products));
     }
   }, []);
+  const color1=varientData?.varient
   console.log(selectedProducts, "sdfasdfasdffasdf");
-  const colors = varientData?.varient;
+  const artist = localStorage.getItem("artist");
+  console.log(artist ==='Bessie', "Comparison Result with Bessie");
+  // const colors = varientData?.varient;
+//   let xyz = "Bessie";
+// console.log(xyz === `Bessie`, "Comparison Result with Bessie");
+  useEffect(() => {
+    const artist = localStorage.getItem("artist");
+    console.log(artist, "Current Artist"); // Log the artist
+let xyz="Beesie";
+    let selectedColors: any[] = [];
+    console.log(artist?.length, "Artist Length");
+    // console.log(xyz ===`Bessie`, "Comparison Result with Bessie");
+    console.log(artist === "Beatrise", "Comparison Result with Beatrise");
+    console.log(artist === "Bella", "Comparison Result with Bella");
+    // Logging the JSON data
+    console.log(varientData, "Variant Data");
+    console.log(beetriceData, "Beetrice Data");
+    console.log(bellaData, "Bella Data");
+    console.log(artist == "Bessie", "tyuertuie");
+
+    if (artist === "Bessie") {
+      selectedColors = varientData?.varient || [];
+    } else if (artist === "Beatrise") {
+      selectedColors = beetriceData.beetrice || [];
+    } else if (artist === "Bella") {
+      selectedColors = bellaData.bella || [];
+    }
+
+    console.log(selectedColors, "Colors from artist");
+    setColors(selectedColors);
+  }, []);
   console.log(colors, "kkkkkk");
   const [selectedColor, setSelectedColor] = useState<any>(null);
   const [modalVisible, setModalVisible] = useState(false);
@@ -22,7 +63,7 @@ const ProductDetail = () => {
     setSelectedColor(color);
     setModalVisible(true);
   };
-
+  const navigate = useNavigate();
   const handleCloseModal = () => {
     setModalVisible(false);
     setSelectedColor(null);
@@ -42,6 +83,7 @@ const ProductDetail = () => {
     existingProducts.push(selectedColor);
     localStorage.setItem("selectedProducts", JSON.stringify(existingProducts));
     setSelectedProducts(existingProducts);
+    navigate("/product-color-combination");
     setModalVisible(false);
   };
   const handleRemoveColor = (index: any) => {
@@ -49,8 +91,32 @@ const ProductDetail = () => {
     localStorage.setItem("selectedProducts", JSON.stringify(updatedProducts));
     setSelectedProducts(updatedProducts);
   };
-  console.log(selectedProducts,"selectedProducts");
-  
+  console.log(selectedProducts, "selectedProducts");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedArtist, setSelectedArtist] = useState<string | null>(null);
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedArtist(null);
+  };
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleArtistClick = (artist: string) => {
+    console.log(artist, "uuu");
+    localStorage.setItem("artist", JSON.stringify(artist));
+    setSelectedArtist(artist);
+    setIsModalOpen(false);
+  };
+
+  // useEffect(() => {
+
+  //   if (products) {
+  //     setArtist(JSON.parse(products));
+  //   }
+  // }, []);
   return (
     <div className="container mt-5 ">
       {/* Heading */}
@@ -60,22 +126,22 @@ const ProductDetail = () => {
             Find Your <span>Colors</span> Today
           </h1>
           <div className="mt-4 tabs_click" aria-disabled>
-          <button
-            className={`btn btn-link active`}
-            // onClick={() => handleTabChange("emotions")}
-          >
-            Choose by Emotions
-          </button>
-          <span className="mx-2">|</span>
-          <Link to={`/`}>
-          <button
-            className={`btn btn-link `}
-            // onClick={() => handleTabChange("trends")}
+            <button
+              className={`btn btn-link active`}
+              // onClick={() => handleTabChange("emotions")}
             >
-            Choose by Trends
-          </button>
+              Choose by Emotions
+            </button>
+            <span className="mx-2">|</span>
+            <Link to={`/`}>
+              <button
+                className={`btn btn-link `}
+                // onClick={() => handleTabChange("trends")}
+              >
+                Choose by Trends
+              </button>
             </Link>
-        </div>
+          </div>
         </div>
       </div>
 
@@ -93,172 +159,243 @@ const ProductDetail = () => {
       {/* Nail Artist Profile */}
       <div className="row justify-content-center text-white mt-3">
         <div className="d-flex gap-3  mediumResponsive">
-        <div className="flexBox">
-        {selectedProducts.slice(0,2).map((res: any, index: number) => (
-            <div className="colo-md-6">
-              <div className="text-center">
-                <div className="d-flex">
-                  <h6 className="mt-2 text-black">COLOR {index + 1}</h6>
-                  <button
-                    className="btn "
-                    style={{ border: "none", color: "red" }}
-                    onClick={() => handleRemoveColor(index)}
-                  >
-                    -
+          <div className="flexBox">
+            {selectedProducts.slice(0, 2).map((res: any, index: number) => (
+              <div className="colo-md-6">
+                <div className="text-center">
+                  <div className="d-flex">
+                    <h6 className="mt-2 text-black">COLOR {index + 1}</h6>
+                    <button
+                      className="btn "
+                      style={{ border: "none", color: "red" }}
+                      onClick={() => handleRemoveColor(index)}
+                    >
+                      -
+                    </button>
+                  </div>
+                  <div className="text-center">
+                    <img
+                      src={res?.image} // Replace with actual image
+                      alt="Color 1"
+                      className="rounded"
+                    />
+                    <h6 className="text-black">{res?.name}</h6>
+                  </div>
+
+                  <button className="btn btn-outline-secondary btn-sm mt-4 btnCart">
+                    <input
+                      type="hidden"
+                      className="varient_id"
+                      value={res?.varient_id}
+                    />
+                    ADD TO BAG
                   </button>
                 </div>
-                <div className="text-center">
+              </div>
+            ))}
+          </div>
+          <div className=" bg-dark p-5 rounded position-relative p-sm-3 innerProductPopup w-100">
+            <div className="row ">
+              <div
+                className="col-md-3 col-sm-12 text-center"
+                onClick={openModal}
+              >
                 <img
-                  src={res?.image} // Replace with actual image
-                  alt="Color 1"
-                  className="rounded"
+                  src="https://via.placeholder.com/100"
+                  alt="Bessie Nail Artist"
+                  className="rounded-circle"
                 />
-                <h6 className="text-black">{res?.name}</h6>
-                
+                <p className="mt-2 mb-1">Beetles Nail Artist</p>
+                <h5 style={{ color: "#dc41a1" }}>{artist}</h5>
               </div>
-            
-             <button className="btn btn-outline-secondary btn-sm mt-4 btnCart" >
-              <input type="hidden" className="varient_id" value={res?.varient_id} />
-                ADD TO BAG
-              </button>
-              </div>
-            </div>
-          ))}
-          </div>
-        <div className=" bg-dark p-5 rounded position-relative p-sm-3 innerProductPopup w-100">
-          <div className="row ">
-            <div className="col-md-3 col-sm-12 text-center">
-              <img
-                src="https://via.placeholder.com/100" // Replace with the actual image
-                alt="Bessie Nail Artist"
-                className="rounded-circle"
-              />
-              <p className="mt-2 mb-1">Beetles Nail Artist</p>
-              <h5 style={{color:"#dc41a1"}}>Bessie</h5>
-            </div>
-            <div className="col-md-9 col-sm-12">
-              <p>
-              Hey, I'm Bessie, your local nail artist! Choose Mysterious
-                Delight for a fabulous look. Mix it with other colors to create
-                a unique, visually pleasing nail design. Explore new styles and
-                bring joy to your nails!
-              </p>
-            </div>
-          </div>
 
-          {/* Color Options */}
-          {/* <div className="row text-center mt-4">
-          <div className="col">
-            <div className="d-flex justify-content-center">
-              <div
-                className="color-circle"
-                style={{ backgroundColor: '#8E8EB5' }}
-              ></div>
-              <div
-                className="color-circle"
-                style={{ backgroundColor: '#F4A75E' }}
-              ></div>
-              <div
-                className="color-circle"
-                style={{ backgroundColor: '#5FC6D0' }}
-              ></div>
-              <div
-                className="color-circle"
-                style={{ backgroundColor: '#CA80C5' }}
-              ></div>
-              <div
-                className="color-circle"
-                style={{ backgroundColor: '#83D07E' }}
-              ></div>
-              <div
-                className="color-circle"
-                style={{ backgroundColor: '#72D2C7' }}
-              ></div>
-            </div>
-            <button className="btn btn-link mt-3" style={{ color: '#f06' }}>
-              I Just Want One Color <span>&gt;</span>
-            </button>
-          </div>
-        </div> */}
-          <div className="row text-center mt-4 color-pailet">
-            {selectedProducts?.length <2?
-            <div className="col">
-              <div className="d-flex justify-content-center">
-                {colors.length > 0
-                  ? colors.map((color: any, index: any) => (
-                      <div
-                        key={index}
-                        className="color-circle"
-                        style={{ backgroundColor: color.hex_code }}
-                        onClick={() => handleColorClick(color)}
-                      ></div>
-                    ))
-                  : ""}
+              {/* Modal */}
+              {isModalOpen && (
+                <div
+                  className="modal fade show"
+                  style={{ display: "block" }}
+                  tabIndex={-1}
+                  aria-labelledby="bessieModalLabel"
+                  aria-hidden={!isModalOpen}
+                >
+                  <div className="modal-dialog">
+                    <div className="modal-content">
+                      <div className="modal-header">
+                        <h5 className="modal-title" id="bessieModalLabel">
+                          Bessie - Beetles Nail Artist
+                        </h5>
+                        <button
+                          type="button"
+                          className="btn-close"
+                          onClick={closeModal}
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div className="modal-body d-flex gap-5 text-center justify-content-center">
+                        <div
+                          className=""
+                          onClick={() => handleArtistClick("Bessie")}
+                        >
+                          <img
+                            src="https://via.placeholder.com/100"
+                            alt="Bessie Nail Artist"
+                            className="rounded-circle mb-3"
+                          />
+                          <p className="text-black">Bessie</p>
+                        </div>
+                        <div
+                          className=""
+                          onClick={() => handleArtistClick("Beatrise")}
+                        >
+                          <img
+                            src="https://via.placeholder.com/100"
+                            alt="Beatrise Nail Artist"
+                            className="rounded-circle mb-3"
+                          />
+                          <p className="text-black">Beatrise</p>
+                        </div>
+                        <div
+                          className=""
+                          onClick={() => handleArtistClick("Bella")}
+                        >
+                          <img
+                            src="https://via.placeholder.com/100"
+                            alt="Bella Nail Artist"
+                            className="rounded-circle mb-3"
+                          />
+                          <p className="text-black">Bella</p>
+                        </div>
+                      </div>
+
+                      {/* Show images based on selected artist */}
+
+                      <div className="modal-footer">
+                        <button
+                          type="button"
+                          className="btn btn-secondary"
+                          onClick={closeModal}
+                        >
+                          Close
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+              {isModalOpen && <div className="modal-backdrop fade show"></div>}
+              {/* Backdrop */}
+              <div className="col-md-9 col-sm-12">
+                <p>
+                  Hey, I'm Bessie, your local nail artist! Choose Mysterious
+                  Delight for a fabulous look. Mix it with other colors to
+                  create a unique, visually pleasing nail design. Explore new
+                  styles and bring joy to your nails!
+                </p>
               </div>
-              {/* <button className="btn btn-link mt-3" style={{ color: "#f06" }}>
+            </div>
+
+            <div className="row text-center mt-4 color-pailet">
+              {selectedProducts?.length < 2 ? (
+                <div className="col">
+                  <div className="d-flex justify-content-center">
+                    {color1.length > 0 ? (
+                      color1.map((color, index) => (
+                        <div
+                          key={index}
+                          className="color-circle"
+                          style={{ backgroundColor: color.hex_code }}
+                          onClick={() => handleColorClick(color)}
+                        ></div>
+                      ))
+                    ) : (
+                      <div>No colors available for this artist.</div>
+                    )}
+                  </div>
+                  {/* <button className="btn btn-link mt-3" style={{ color: "#f06" }}>
                 I Just Want One Color <span>&gt;</span>
               </button> */}
-            </div>:""}
-          </div>
-          {/* model move  */}
+                </div>
+              ) : (
+                ""
+              )}
+            </div>
 
-        {modalVisible && (
-        <div
-          className=" fade show"
-          style={{ display: "block" }}
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div className="popup_product">
-            <div className="popup_productcontent">
-              <div className="popup_productheader">
-                {/* <h5 className="modal-title" id="exampleModalLabel">
+            <div className="col d-flex">
+              <Link
+                className="justify-content-center mt-5 items-center "
+                to={`/product-color-combination`}
+              >
+                <button className="items-center btnCart">
+                  I just want one color to express an emotion.
+                </button>
+              </Link>
+              <Link
+                className="justify-content-center mt-5 items-center "
+                to={`/`}
+              >
+                <button className="items-center btnCart">
+                  I would like to choose a different color for the first one.
+                </button>
+              </Link>
+            </div>
+            {/* model move  */}
+
+            {modalVisible && (
+              <div
+                className=" fade show"
+                style={{ display: "block" }}
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div className="popup_product">
+                  <div className="popup_productcontent">
+                    <div className="popup_productheader">
+                      {/* <h5 className="modal-title" id="exampleModalLabel">
                   Products for {selectedColor?.name}
                 </h5> */}
-                <button
-                  type="button"
-                  className="btn-close"
-                  onClick={handleCloseModal}
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div className="popup_body">
-                <div>
-                  <img
-                    src={selectedColor?.image || ""}
-                    alt="product image not available"
-                    style={{ maxWidth: "100%", height: "auto" }}
-                  />
+                      <button
+                        type="button"
+                        className="btn-close"
+                        onClick={handleCloseModal}
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div className="popup_body">
+                      <div>
+                        <img
+                          src={selectedColor?.image || ""}
+                          alt="product image not available"
+                          style={{ maxWidth: "100%", height: "auto" }}
+                        />
+                      </div>
+                      {/* <h5>{selectedColor?.name}</h5> */}
+                      <a
+                        href={selectedColor?.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {selectedColor?.name}
+                      </a>
+                    </div>
+                    <div className="popup-footer">
+                      <Link
+                        to="/product-color-combination"
+                        onClick={handleSelectColor}
+                      >
+                        <button
+                          type="button"
+                          className="btn text-black btn-outline-secondary rounded-5"
+                        >
+                          SELECT THIS COLOR
+                        </button>
+                      </Link>
+                    </div>
+                  </div>
                 </div>
-                {/* <h5>{selectedColor?.name}</h5> */}
-                <a
-                  href={selectedColor?.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {selectedColor?.name}
-                </a>
               </div>
-              <div className="popup-footer">
-                <Link to="/product-detail" onClick={handleSelectColor}>
-                  <button
-                    type="button"
-                    className="btn text-black btn-outline-secondary rounded-5"
-                  >
-                    SELECT THIS COLOR
-                  </button>
-                </Link>
-              </div>
-            </div>
+            )}
           </div>
         </div>
-      )}
-        </div>
-
-      </div>
-<Link className="justify-content-center mt-5 items-center " to={`/product-color-combination`}>
-<button className="items-center btnCart">VIEW MY COLOR THEME FOR TODAY</button>
-</Link>
       </div>
 
       {/* Color Picker Section */}
@@ -292,7 +429,7 @@ const ProductDetail = () => {
          
         </div>
       </div> */}
-     
+
       {/* {modalVisible && <div className="modal-backdrop fade show" onClick={handleCloseModal}></div>} */}
     </div>
   );

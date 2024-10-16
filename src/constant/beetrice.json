@@ -1,0 +1,58 @@
+{
+    "beetrice":[
+        {
+            "id": "Product 019",
+            "name": "Dreamy Blue |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/dreamy-blue-15ml-gel-polish",
+            "image":"https://cdn.shopify.com/s/files/1/0839/3821/4234/files/Picture1.jpg?v=1728976008",
+            "color_name": "Ice Water",
+            "hex_code": "#B2EBF2",
+            "varient_id":""
+          },
+          {
+            "id": "Product 029",
+            "name": "Cascade Green |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/cascade-green-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/image-1-229_compact.jpg",
+            "color_name": "Pale Aqua",
+            "hex_code": "#AFEEEE",
+             "varient_id":"49246485741914"
+          },
+          {
+            "id": "Product 024",
+            "name": "Serene Oasis |15ml Nail Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/serene-oasis-15ml-nail-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/1-185_compact.jpg",
+            "color_name": "Patina Green",
+            "hex_code": "#78A5A3",
+            "varient_id":"49246485283162"
+          },
+          {
+            "id": "Product 031",
+            "name": "Sage #a802 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/sage-a802-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/34e287635f034dae83af4ceb294cb143_compact.jpg",
+            "color_name": "Soft Sage",
+            "hex_code": "#C1CDC1",
+            "varient_id":"49246379114842"
+          },
+          {
+            "id": "Product 039",
+            "name": "Peach Milkshake #a794 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/peach-milkshake-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/35d6780d242b4160b99522550275cbbb_compact.png",
+            "color_name": "Iceland Poppy",
+            "hex_code": "#FF7F50",
+            "varient_id":"49246372626778"
+          },
+          {
+            "id": "Product 042",
+            "name": "Jupiter #b739 | Cat Eye 15ml Nail Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/jupiter-b739-cat-eye-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/5d6e77fcb727489fb6c7e805252967c6_compact.jpg",
+            "color_name": "Flame Red",
+            "hex_code": "#E25822",
+            "varient_id":"49246387601754"
+          }
+    ]
+}

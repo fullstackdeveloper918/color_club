@@ -1,0 +1,58 @@
+{
+    "bella":[
+        {
+            "id": "Product 073",
+            "name": "Periwinkle #a816 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/periwinkle-a816-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/4fc7af6fa9b34df99a02e0470f54e671_compact.jpg",
+            "color_name": "Lavender Fog",
+            "hex_code": "#CEC3E6",
+            "varient_id":"49246372561242"
+          },
+          {
+            "id": "Product 076",
+            "name": "Lip Liner #a800 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/lip-liner-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/d4fb795d499342299d59e8814f34e033_compact.jpg",
+            "color_name": "English Lavender",
+            "hex_code": "#B48395",
+            "varient_id":"49246367285594"
+          },
+          {
+            "id": "Product 086",
+            "name": "Ultra Violet #b580 | Coloring Changing 15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/ultra-violet-b580-15ml-coloring-changing-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/2f1…_ef0f1ab1-d802-4977-a059-1fe6efbad9d3_compact.png",
+            "color_name": "Mystic Lavender",
+            "hex_code": "#DDA0DD",
+            "varient_id":"49246377967962"
+          },
+          {
+            "id": "Product 127",
+            "name": "Dark Teal #b797 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/b797-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/9ce10b5526a54f47a50d1d48b2cdc58c_compact.png",
+            "color_name": "Patina Green",
+            "hex_code": "#78A5A3",
+            "varient_id":"49246387798362"
+          },
+          {
+            "id": "Product 129",
+            "name": "Green Bee #b201 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/green-bee-15ml-gel-polish",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/499739de884246618b52d2ea9ea21303_compact.jpg",
+            "color_name": "Vibrant Green",
+            "hex_code": "#00B140",
+            "varient_id":"49246365253978"
+          },
+          {
+            "id": "Product 096",
+            "name": "Alicia Jam #b973 |15ml Gel Polish",
+            "link": "https://9c35bd-26.myshopify.com/products/alicia-jam",
+            "image":"https://9c35bd-26.myshopify.com/cdn/shop/files/afc4cdf977a84be1850f83f4db3507b5_compact.jpg",
+            "color_name": "Rose Red",
+            "hex_code": "#C21E56",
+            "varient_id":"49246354637146"
+          }
+    ]
+}
