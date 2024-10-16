@@ -74,7 +74,7 @@ const ProductDetail = () => {
 
   const handleArtistClick = (artist: string) => {
     console.log(artist, "uuu");
-    window.location.reload();
+    window.location.href = window.location.href;
     localStorage.setItem("artist", JSON.stringify(artist));
     setSelectedArtist(artist);
     setIsModalOpen(false);
