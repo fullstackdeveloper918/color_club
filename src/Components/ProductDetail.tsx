@@ -126,7 +126,7 @@ useEffect(() => {
   console.log(selectedColors, "Colors from artist");
   setColors(selectedColors);
 }, []);
-
+const xyz=varientData.varient
   console.log(colors, "kkkkkk");
   return (
     <div className="container mt-5 ">
@@ -217,7 +217,7 @@ useEffect(() => {
                   className="rounded-circle"
                 />
                 <p className="mt-2 mb-1">Beetles Nail Artist</p>
-                <h5 style={{ color: "#dc41a1" }}>{asd}</h5>
+                <h5 style={{ color: "#dc41a1" }}>{asd||"Bessie"}</h5>
               </div>
 
               {/* Modal */}
@@ -319,7 +319,15 @@ useEffect(() => {
                         ></div>
                       ))
                     ) : (
-                      <div>No colors available for this artist.</div>
+                      xyz.map((color, index) => (
+                        <div
+                          key={index}
+                          className="color-circle"
+                          style={{ backgroundColor: color.hex_code }}
+                          onClick={() => handleColorClick(color)}
+                        ></div>
+                      ))
+                    
                     )}
                   </div>
                   {/* <button className="btn btn-link mt-3" style={{ color: "#f06" }}>
@@ -331,7 +339,7 @@ useEffect(() => {
               )}
             </div>
 
-            <div className="col d-flex">
+            <div className="blockWrapper">
               <Link
                 className="justify-content-center mt-5 items-center "
                 to={`/product-color-combination`}
