@@ -366,12 +366,13 @@ const ProductDetail = () => {
                           ></div>
                         ))}
                   </div>
+                  {isMobile?
                   <button
                     className="btn btn-link mt-3"
                     style={{ color: "#f06" }}
                   >
                     I Just Want One Color <span>&gt;</span>
-                  </button>
+                  </button>:""}
                 </div>
               ) : (
                 ""

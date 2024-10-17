@@ -157,7 +157,7 @@ const ProductCombine = () => {
           </div>
 
           <div className=" bg-dark p-5 rounded position-relative p-sm-3 innerProductPopup w-100">
-            <div className="row ">
+            <div className="row innerProduct">
               <div className=" ">
                 <div className="colorsWrapper mb-3">
                   <div
