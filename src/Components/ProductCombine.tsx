@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import varientData from "../constant/variant.json";
+ import image from "../assets/images/image (9).png"
+ import heart from "../assets/images/image (10).png"
 const ProductCombine = () => {
   const [selectedProducts, setSelectedProducts] = useState<any>([]);
 
@@ -102,7 +104,7 @@ const ProductCombine = () => {
         <div className="col-1">
           <Link to={"/"}>
             <button className="btn btn-link backBtn">
-              <span className="bi bi-arrow-left"></span>{`<`} BACK
+              <span className="bi bi-arrow-left"></span><svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><title/><path d="M39.3756,48.0022l30.47-25.39a6.0035,6.0035,0,0,0-7.6878-9.223L26.1563,43.3906a6.0092,6.0092,0,0,0,0,9.2231L62.1578,82.615a6.0035,6.0035,0,0,0,7.6878-9.2231Z"/></svg> BACK
             </button>
           </Link>
         </div>
@@ -116,6 +118,7 @@ const ProductCombine = () => {
           {/* mobile structure ended*/}
 
           <div>
+            {!isMobile?
             <div className="flexBox">
               {selectedProducts.slice(0, 2).map((res: any, index: number) => (
                 <div className="colo-md-6 ">
@@ -150,7 +153,7 @@ const ProductCombine = () => {
                   </div>
                 </div>
               ))}
-            </div>
+            </div>:""}
           </div>
 
           <div className=" bg-dark p-5 rounded position-relative p-sm-3 innerProductPopup w-100">
@@ -171,7 +174,7 @@ const ProductCombine = () => {
                   ></div>
                 </div>
                 <div className="d-flex gap-2">
-{!isMobile?
+{isMobile?
                 <img
                   src="https://via.placeholder.com/100"
                   alt="Bessie Nail Artist"
@@ -181,17 +184,17 @@ const ProductCombine = () => {
                 <h6 className="mt-2 mb-1">Your color theme for today is</h6>
                   </div>
                 <h2> <img
-                 src="https://9c35bd-26.myshopify.com/cdn/shop/files/Cute.png?v=1727258342" alt="" style={{height:"30px"}}
+                 src="https://9c35bd-26.myshopify.com/cdn/shop/files/Happy.png?v=1727257700" alt="" style={{height:"28px"}}
                   className="rounded-circle"
                 
                   />Joyful Exploration
                    <img
-                 src="https://9c35bd-26.myshopify.com/cdn/shop/files/Inlove.png?v=1727258342" alt="" style={{height:"30px"}}
+                 src={image} alt="" style={{height:"30px"}}
                   className="rounded-circle"
                 
                   />
                    <img
-                 src="https://9c35bd-26.myshopify.com/cdn/shop/files/Cute.png?v=1727258342" alt="" style={{height:"30px"}}
+                 src={heart} alt="" style={{height:"30px"}}
                   className="rounded-circle"
                 
                   />
@@ -227,41 +230,6 @@ const ProductCombine = () => {
                 <button className="pinkBtn">Add Color Today</button>
               </div>
             </div>
-
-            {/* Color Options */}
-            {/* <div className="row text-center mt-4">
-          <div className="col">
-            <div className="d-flex justify-content-center">
-              <div
-                className="color-circle"
-                style={{ backgroundColor: '#8E8EB5' }}
-              ></div>
-              <div
-                className="color-circle"
-                style={{ backgroundColor: '#F4A75E' }}
-              ></div>
-              <div
-                className="color-circle"
-                style={{ backgroundColor: '#5FC6D0' }}
-              ></div>
-              <div
-                className="color-circle"
-                style={{ backgroundColor: '#CA80C5' }}
-              ></div>
-              <div
-                className="color-circle"
-                style={{ backgroundColor: '#83D07E' }}
-              ></div>
-              <div
-                className="color-circle"
-                style={{ backgroundColor: '#72D2C7' }}
-              ></div>
-            </div>
-            <button className="btn btn-link mt-3" style={{ color: '#f06' }}>
-              I Just Want One Color <span>&gt;</span>
-            </button>
-          </div>
-        </div> */}
 
             {/* model move  */}
 
@@ -402,9 +370,18 @@ const ProductCombine = () => {
           </div>
 
           {/* Colors Section */}
+          <div className="d-flex justify-content-between">
+            {!isMobile?
           <h3 className="text-left mt-4 text-black">
             See what colors make others happy
-          </h3>
+          </h3>:
+          <h3 className="text-left mt-4 text-black">
+            Check out other sisters'<br></br> creation with this theme
+          </h3>}
+          {isMobile?
+           <p className="text-black mt-4">SEE MORE</p>:""}
+
+          </div>
           <div className=" mt-3 gridBox">
             <div className="width50">
               <img
@@ -448,7 +425,55 @@ const ProductCombine = () => {
                 className="img-fluid"
               />
             </div>
-          </div>
+           </div>
+            <div className="justify-content-end">
+
+            {!isMobile?
+            <p className="text-black mt-4">SEE MORE</p>:""}
+            </div>
+          {isMobile ? (
+              <div
+                className="col-md-6 col-sm-12 p-3"
+                style={{
+                  boxShadow: "none",
+                  border: "0",
+                  background: "#F5F5F5",
+                }}
+              >
+                <h3 className="text-black">You might be intrested</h3>
+                <div className="card mb-3 text-center flexRow border-0">
+                  {colors?.slice(0, 2).map((res: any) => (
+                    <div className="card-body ">
+                      <div className="text-center">
+                        <img
+                          src={res?.image} // Replace with actual image
+                          alt="Color 1"
+                          className="rounded"
+                        />
+                        <h6 className="text-black">{res?.name}</h6>
+                      </div>
+                      <button className="btn btn-outline-secondary btn-sm mt-4 btnCart">
+                        <input
+                          type="hidden"
+                          className="varient_id"
+                          value={res?.varient_id}
+                        />
+                        ADD TO BAG
+                      </button>
+                    </div>
+                  ))}
+                </div>
+
+                {/* <div className="card text-center">
+            <div className="card-body">
+              <h5 className="card-title">ALL IN ONE KIT</h5>
+              <button className="btn btn-secondary">SEE MORE</button>
+            </div>
+          </div> */}
+              </div>
+            ) : (
+              ""
+            )}
         </div>
       </div>
 
