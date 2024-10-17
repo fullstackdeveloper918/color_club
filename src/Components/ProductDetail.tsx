@@ -21,8 +21,8 @@ const ProductDetail = () => {
       setSelectedProducts(JSON.parse(products));
     }
   }, []);
-  const color1=varientData?.varient
-  
+  const color1 = varientData?.varient;
+
   const [selectedColor, setSelectedColor] = useState<any>(null);
   const [modalVisible, setModalVisible] = useState(false);
   console.log(selectedColor, "selectedColor");
@@ -51,7 +51,7 @@ const ProductDetail = () => {
     existingProducts.push(selectedColor);
     localStorage.setItem("selectedProducts", JSON.stringify(existingProducts));
     setSelectedProducts(existingProducts);
-    navigate("/product-color-combination");
+    // navigate("/product-color-combination");
     setModalVisible(false);
   };
   const handleRemoveColor = (index: any) => {
@@ -78,7 +78,6 @@ const ProductDetail = () => {
     localStorage.setItem("artist", JSON.stringify(artist));
     setSelectedArtist(artist);
     setIsModalOpen(false);
-    
   };
 
   // useEffect(() => {
@@ -88,46 +87,58 @@ const ProductDetail = () => {
   //   }
   // }, []);
 
-  const artist:any = localStorage.getItem("artist");
-  let asd=JSON.parse(artist)
-console.log(asd,"asd");
+  const artist: any = localStorage.getItem("artist");
+  let asd = JSON.parse(artist);
+  console.log(asd, "asd");
 
-useEffect(() => {
-  const artist:any = localStorage.getItem("artist");
-  let artist1;
+  useEffect(() => {
+    const artist: any = localStorage.getItem("artist");
+    let artist1;
 
-  try {
-    artist1 = JSON.parse(artist);
-  } catch (e) {
-    console.error("Failed to parse artist from localStorage", e);
-    artist1 = null; // Handle parsing error
-  }
+    try {
+      artist1 = JSON.parse(artist);
+    } catch (e) {
+      console.error("Failed to parse artist from localStorage", e);
+      artist1 = null; // Handle parsing error
+    }
 
-  console.log(artist1, "Current Artist");
+    console.log(artist1, "Current Artist");
 
-  let selectedColors:any = [];
-  console.log(artist1?.length, "Artist Length");
-  
-  console.log(artist1 === "Beatrise", "Comparison Result with Beatrise");
-  console.log(artist1 === "Bella", "Comparison Result with Bella");
-  console.log(varientData, "Variant Data");
-  console.log(beetriceData, "Beetrice Data");
-  console.log(bellaData, "Bella Data");
-  console.log(artist1 === "Bessie", "tyuertuie");
+    let selectedColors: any = [];
+    console.log(artist1?.length, "Artist Length");
 
-  if (artist1 === "Bessie") {
+    console.log(artist1 === "Beatrise", "Comparison Result with Beatrise");
+    console.log(artist1 === "Bella", "Comparison Result with Bella");
+    console.log(varientData, "Variant Data");
+    console.log(beetriceData, "Beetrice Data");
+    console.log(bellaData, "Bella Data");
+    console.log(artist1 === "Bessie", "tyuertuie");
+
+    if (artist1 === "Bessie") {
       selectedColors = varientData.varient || [];
-  } else if (artist1 === "Beatrise") {
+    } else if (artist1 === "Beatrise") {
       selectedColors = beetriceData.beetrice || [];
-  } else if (artist1 === "Bella") {
+    } else if (artist1 === "Bella") {
       selectedColors = bellaData.bella || [];
-  }
+    }
 
-  console.log(selectedColors, "Colors from artist");
-  setColors(selectedColors);
-}, []);
-const xyz=varientData.varient
+    console.log(selectedColors, "Colors from artist");
+    setColors(selectedColors);
+  }, []);
+  const xyz = varientData.varient;
   console.log(colors, "kkkkkk");
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 767);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <div className="container mt-5 ">
       {/* Heading */}
@@ -170,50 +181,45 @@ const xyz=varientData.varient
       {/* Nail Artist Profile */}
       <div className="row justify-content-center text-white mt-3">
         <div className="d-flex gap-3  mediumResponsive">
-          {/* <div className="flexBox">
-            {selectedProducts.slice(0, 2).map((res: any, index: number) => (
-              <div className="colo-md-6 dses">
-                <div className="text-center">
-                  <div className="d-flex">
-                    <h6 className="mt-2 text-black">COLOR {index + 1}</h6>
-                    <button
-                      className="btn "
-                      style={{ border: "none", color: "red" }}
-                      onClick={() => handleRemoveColor(index)}
-                    >
-                      -
+          {!isMobile ? (
+            <div className="flexBox">
+              {selectedProducts.slice(0, 2).map((res: any, index: number) => (
+                <div className="colo-md-6 dses">
+                  <div className="text-center">
+                    <div className="d-flex">
+                      <h6 className="mt-2 text-black">COLOR {index + 1}</h6>
+                      <button
+                        className="btn "
+                        style={{ border: "none", color: "red" }}
+                        onClick={() => handleRemoveColor(index)}
+                      >
+                        -
+                      </button>
+                    </div>
+                    <div className="text-center">
+                      <img
+                        src={res?.image} // Replace with actual image
+                        alt="Color 1"
+                        className="rounded"
+                      />
+                      <h6 className="text-black">{res?.name}</h6>
+                    </div>
+
+                    <button className="btn btn-outline-secondary btn-sm mt-4 btnCart">
+                      <input
+                        type="hidden"
+                        className="varient_id"
+                        value={res?.varient_id}
+                      />
+                      ADD TO BAG
                     </button>
                   </div>
-                  <div className="text-center">
-                    <img
-                      src={res?.image} // Replace with actual image
-                      alt="Color 1"
-                      className="rounded"
-                    />
-                    <h6 className="text-black">{res?.name}</h6>
-                  </div>
-
-                  <button className="btn btn-outline-secondary btn-sm mt-4 btnCart">
-                    <input
-                      type="hidden"
-                      className="varient_id"
-                      value={res?.varient_id}
-                    />
-                    ADD TO BAG
-                  </button>
                 </div>
-              </div>
-            ))}
-          </div> */}
-
-
-
-
-
-
-
-
-
+              ))}
+            </div>
+          ) : (
+            ""
+          )}
 
           <div className=" bg-dark p-5 rounded position-relative p-sm-3 innerProductPopup w-100">
             <div className="row ">
@@ -227,7 +233,7 @@ const xyz=varientData.varient
                   className="rounded-circle"
                 />
                 <p className="mt-2 mb-1">Beetles Nail Artist</p>
-                <h5 style={{ color: "#dc41a1" }}>{asd||"Bessie"}</h5>
+                <h5 style={{ color: "#dc41a1" }}>{asd || "Bessie"}</h5>
               </div>
 
               {/* Modal */}
@@ -306,12 +312,20 @@ const xyz=varientData.varient
               {isModalOpen && <div className="modal-backdrop fade show"></div>}
               {/* Backdrop */}
               <div className="col-md-9 col-sm-12">
-                <p>
-                  Hey, I'm Bessie, your local nail artist! Choose Mysterious
-                  Delight for a fabulous look. Mix it with other colors to
-                  create a unique, visually pleasing nail design. Explore new
-                  styles and bring joy to your nails!
-                </p>
+                {selectedProducts?.length < 2 ? (
+                  <p>
+                    Hey, I'm Bessie, your local nail artist! Choose Mysterious
+                    Delight for a fabulous look. Mix it with other colors to
+                    create a unique, visually pleasing nail design. Explore new
+                    styles and bring joy to your nails!
+                  </p>
+                ) : (
+                  <p className="">
+                    Great choice
+                    <br></br>
+                    Now click to confirm and see your color theme for today
+                  </p>
+                )}
               </div>
             </div>
 
@@ -319,26 +333,23 @@ const xyz=varientData.varient
               {selectedProducts?.length < 2 ? (
                 <div className="col">
                   <div className="d-flex justify-content-center">
-                    {colors.length > 0 ? (
-                      colors.map((color, index) => (
-                        <div
-                          key={index}
-                          className="color-circle"
-                          style={{ backgroundColor: color.hex_code }}
-                          onClick={() => handleColorClick(color)}
-                        ></div>
-                      ))
-                    ) : (
-                      xyz.map((color, index) => (
-                        <div
-                          key={index}
-                          className="color-circle"
-                          style={{ backgroundColor: color.hex_code }}
-                          onClick={() => handleColorClick(color)}
-                        ></div>
-                      ))
-                    
-                    )}
+                    {colors.length > 0
+                      ? colors.map((color, index) => (
+                          <div
+                            key={index}
+                            className="color-circle"
+                            style={{ backgroundColor: color.hex_code }}
+                            onClick={() => handleColorClick(color)}
+                          ></div>
+                        ))
+                      : xyz.map((color, index) => (
+                          <div
+                            key={index}
+                            className="color-circle"
+                            style={{ backgroundColor: color.hex_code }}
+                            onClick={() => handleColorClick(color)}
+                          ></div>
+                        ))}
                   </div>
                   {/* <button className="btn btn-link mt-3" style={{ color: "#f06" }}>
                 I Just Want One Color <span>&gt;</span>
@@ -348,25 +359,28 @@ const xyz=varientData.varient
                 ""
               )}
             </div>
-
-            <div className="blockWrapper">
-              <Link
-                className="justify-content-center mt-5 items-center "
-                to={`/product-color-combination`}
-              >
-                <button className="items-center btnCart">
-                  I just want one color to express an emotion.
-                </button>
-              </Link>
-              <Link
-                className="justify-content-center mt-5 items-center "
-                to={`/`}
-              >
-                <button className="items-center btnCart">
-                  I would like to choose a different color for the first one.
-                </button>
-              </Link>
-            </div>
+            {!isMobile ? (
+              <div className="blockWrapper">
+                <Link
+                  className="justify-content-center mt-5 items-center "
+                  to={`/product-color-combination`}
+                >
+                  <button className="items-center btnCart">
+                    I just want one color to express an emotion.
+                  </button>
+                </Link>
+                <Link
+                  className="justify-content-center mt-5 items-center "
+                  to={`/`}
+                >
+                  <button className="items-center btnCart">
+                    I would like to choose a different color for the first one.
+                  </button>
+                </Link>
+              </div>
+            ) : (
+              ""
+            )}
             {/* model move  */}
 
             {modalVisible && (
@@ -406,19 +420,31 @@ const xyz=varientData.varient
                         {selectedColor?.name}
                       </a>
                     </div>
-                    <div className="popup-footer">
-                      <Link
-                        to="/product-color-combination"
-                        onClick={handleSelectColor}
-                      >
+                    {!isMobile ? (
+                      <div className="popup-footer">
+                        <Link
+                          to="/product-color-combination"
+                          onClick={handleSelectColor}
+                        >
+                          <button
+                            type="button"
+                            className="btn text-black btn-outline-secondary rounded-5"
+                          >
+                            SELECT THIS COLOR
+                          </button>
+                        </Link>
+                      </div>
+                    ) : (
+                      <div className="popup-footer">
                         <button
+                          onClick={handleSelectColor}
                           type="button"
                           className="btn text-black btn-outline-secondary rounded-5"
                         >
                           SELECT THIS COLOR
                         </button>
-                      </Link>
-                    </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -426,7 +452,126 @@ const xyz=varientData.varient
           </div>
         </div>
       </div>
+      {isMobile ? (
+        <div className="colorMobileStructure">
+          <div className="flexBox mobileGrid">
+            {/* {selectedProducts.slice(0, 2).map((res: any, index: number) => (
+                <div className="colo-md-6 mobileColumnShadow">
+                  <div className="text-center">
+                    <div className="d-flex">
+                      <h6 className="mt-2 text-black">COLOR {index + 1}</h6>
+                      <button
+                        className="btn "
+                        style={{ border: "none", color: "red" }}
+                        onClick={() => handleRemoveColor(index)}
+                      >
+                        -
+                      </button>
+                    </div>
+                    <div className="text-center">
+                     <div className="borderImage">
+                     <img
+                        src={res?.image} // Replace with actual image
+                        alt="Color 1"
+                        className="rounded"
+                      />
+                       <h6 className="text-black text-desciption">{res?.name}</h6>
+                      </div>
+                     
+                    </div>
 
+                    <button className="btn btn-outline-secondary btn-sm mt-4 btnCart">
+                      <input
+                        type="hidden"
+                        className="varient_id"
+                        value={res?.varient_id}
+                      />
+                      ADD Color TO BAG
+                    </button>
+                  </div>
+                </div>
+              ))} */}
+            {selectedProducts.map((res: any, index: number) => (
+              <>
+                <div key={index} className="mobileColumnShadow">
+                  <div className="text-center ">
+                    <div className="d-flex">
+                      <h6 className="mt-2">COLOR {index + 1}</h6>
+                      <button
+                        className="btn"
+                        style={{ border: "none", color: "red" }}
+                        onClick={() => handleRemoveColor(index)}
+                      >
+                        -
+                      </button>
+                    </div>
+                    <div className="borderImage">
+                      <img
+                        src={res?.image} // Replace with actual image
+                        alt={`Color ${index + 1}`}
+                        className="rounded"
+                      />
+                    </div>
+                    {selectedProducts.length==1?
+                    <span>+</span>:""}
+                    {/* Show "+" only if the current index is 0 and there is a next item */}
+                    {selectedProducts.length === 2 ? (
+        index === 0 && <span>+</span>
+      ) : (
+        index < selectedProducts.length - 1 && <span>+</span>
+      )}
+                  </div>
+                  <button className="btn btn-outline-secondary btn-sm mt-4 btnCart">
+                    <input
+                      type="hidden"
+                      className="varient_id"
+                      value={res?.varient_id}
+                    />
+                    ADD Color TO BAG
+                  </button>
+                </div>
+                {selectedProducts.length < 2?
+                <div key={index} className="mobileColumnShadow">
+                  <div className="text-center ">
+                    <div className="d-flex">
+                      <h6 className="mt-2">COLOR {index + 2}</h6>
+                      {/* <button
+                        className="btn"
+                        style={{ border: "none", color: "red" }}
+                        onClick={() => handleRemoveColor(index)}
+                      >
+                        -
+                      </button> */}
+                    </div>
+                    <div className="borderImage">
+                     
+                    </div>
+                   
+                    {/* Show "+" only if the current index is 0 and there is a next item */}
+                    {/* {index < selectedProducts.length - 1 && <span>+</span>} */}
+                  </div>
+                </div>:""}
+                {/* {index < selectedProducts.length - 1 && <span>+</span>} */}
+              </>
+            ))}
+
+            <div className="mobileYouColor"> Your color Today</div>
+          </div>
+          <Link to={`/product-color-combination`}>
+            <button className="btn btn-outline-secondary btn-sm mt-4 btnCart">
+              <input type="hidden" className="varient_id" />
+              VIEW MY COLOR THEME FOR TODAY
+            </button>
+          </Link>
+        </div>
+      ) : (
+        ""
+      )}
+
+       {/* {selectedProducts.length < 2?
+                    <div className="borderImage">
+                      
+                    </div>:""} */}
       {/* Color Picker Section */}
       {/* <div className="row justify-content-center mt-5">
         <div className="col-md-8 d-flex align-items-center justify-content-around">
