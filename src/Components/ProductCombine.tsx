@@ -211,6 +211,7 @@ const ProductCombine = () => {
                 <a href="/cart" className="">
                   <button className="whitBtn">Add all product to bag</button>
                 </a>
+                {/* {isMobile?} */}
                 <div className="d-flex justify-content-between">
                   <a href="/" className="">
                     <button className="tryBtn tryagain">Try Again</button>
@@ -226,8 +227,8 @@ const ProductCombine = () => {
                     </button>
                   </div>
                 </div>
-                <button className="pinkBtn">Share Color Today</button>
-                <button className="pinkBtn">Add Color Today</button>
+                <button className="pinkBtn">SHARE TODAY'S COLOR Today</button>
+                <button className="pinkBtn">ADD TODAY'S COLOR TO BAG</button>
               </div>
             </div>
 
@@ -378,8 +379,7 @@ const ProductCombine = () => {
           <h3 className="text-left mt-4 text-black">
             Check out other sisters'<br></br> creation with this theme
           </h3>}
-          {isMobile?
-           <p className="text-black mt-4">SEE MORE</p>:""}
+        
 
           </div>
           <div className=" mt-3 gridBox">
@@ -428,12 +428,11 @@ const ProductCombine = () => {
            </div>
             <div className="justify-content-end">
 
-            {!isMobile?
-            <p className="text-black mt-4">SEE MORE</p>:""}
+            <p className="text-black mt-4">SEE MORE</p>
             </div>
           {isMobile ? (
               <div
-                className="col-md-6 col-sm-12 p-3"
+                className="col-md-6 col-sm-12 p-3 mobileCards"
                 style={{
                   boxShadow: "none",
                   border: "0",
@@ -441,7 +440,7 @@ const ProductCombine = () => {
                 }}
               >
                 <h3 className="text-black">You might be intrested</h3>
-                <div className="card mb-3 text-center flexRow border-0">
+                <div className="card mb-3 text-center flexRow cardsss border-0">
                   {colors?.slice(0, 2).map((res: any) => (
                     <div className="card-body ">
                       <div className="text-center">

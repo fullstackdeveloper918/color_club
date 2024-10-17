@@ -139,8 +139,8 @@ const ProductDetail = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  console.log(selectedProducts,"selectedProducts");
-  
+  console.log(selectedProducts, "selectedProducts");
+
   return (
     <div className="container mt-5 ">
       {/* Heading */}
@@ -174,7 +174,12 @@ const ProductDetail = () => {
         <div className="col-1">
           <Link to={"/"}>
             <button className="btn btn-link backBtn">
-              <span className="bi bi-arrow-left"></span><svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><title/><path d="M39.3756,48.0022l30.47-25.39a6.0035,6.0035,0,0,0-7.6878-9.223L26.1563,43.3906a6.0092,6.0092,0,0,0,0,9.2231L62.1578,82.615a6.0035,6.0035,0,0,0,7.6878-9.2231Z"/></svg> BACK
+              <span className="bi bi-arrow-left"></span>
+              <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+                <title />
+                <path d="M39.3756,48.0022l30.47-25.39a6.0035,6.0035,0,0,0-7.6878-9.223L26.1563,43.3906a6.0092,6.0092,0,0,0,0,9.2231L62.1578,82.615a6.0035,6.0035,0,0,0,7.6878-9.2231Z" />
+              </svg>{" "}
+              BACK
             </button>
           </Link>
         </div>
@@ -324,7 +329,12 @@ const ProductDetail = () => {
                 ) : (
                   <p className="">
                     Great choice!
-                    <img src="https://9c35bd-26.myshopify.com/cdn/shop/files/Cute.png?v=1727258342" alt="" style={{height:"30px"}} className="" />
+                    <img
+                      src="https://9c35bd-26.myshopify.com/cdn/shop/files/Cute.png?v=1727258342"
+                      alt=""
+                      style={{ height: "30px" }}
+                      className=""
+                    />
                     <br></br>
                     Now click to confirm and see your color theme for today
                   </p>
@@ -338,15 +348,14 @@ const ProductDetail = () => {
                   <div className="d-flex justify-content-center">
                     {colors.length > 0
                       ? colors.map((color, index) => (
-                        <>
-                          <div
-                            key={index}
-                            className="color-circle"
-                            style={{ backgroundColor: color.hex_code }}
-                            onClick={() => handleColorClick(color)}
-                          ></div>
-                        </>
-
+                          <>
+                            <div
+                              key={index}
+                              className="color-circle"
+                              style={{ backgroundColor: color.hex_code }}
+                              onClick={() => handleColorClick(color)}
+                            ></div>
+                          </>
                         ))
                       : xyz.map((color, index) => (
                           <div
@@ -357,9 +366,12 @@ const ProductDetail = () => {
                           ></div>
                         ))}
                   </div>
-                  <button className="btn btn-link mt-3" style={{ color: "#f06" }}>
-                I Just Want One Color <span>&gt;</span>
-              </button>
+                  <button
+                    className="btn btn-link mt-3"
+                    style={{ color: "#f06" }}
+                  >
+                    I Just Want One Color <span>&gt;</span>
+                  </button>
                 </div>
               ) : (
                 ""
@@ -558,16 +570,18 @@ const ProductDetail = () => {
                 {/* {index < selectedProducts.length - 1 && <span>+</span>} */}
               </>
             ))}
-<span className="">{`>`}</span>
+            <span className="">{`>`}</span>
             <div className="mobileYouColor"> Your color Today</div>
           </div>
           <Link to={`/product-color-combination`}>
-          {selectedProducts?.length !==1 ?
-            <button className="btn btn-outline-secondary btn-sm mt-4 btnCart1">
-              <input type="hidden" className="varient_id"  />
-              VIEW MY COLOR THEME FOR TODAY
-            </button>
-            :""} 
+            {selectedProducts?.length !== 1 ? (
+              <button className="btn btn-outline-secondary btn-sm mt-4 btnCart1">
+                <input type="hidden" className="varient_id" />
+                VIEW MY COLOR THEME FOR TODAY
+              </button>
+            ) : (
+              ""
+            )}
           </Link>
         </div>
       ) : (
