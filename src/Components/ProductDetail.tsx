@@ -170,9 +170,9 @@ const xyz=varientData.varient
       {/* Nail Artist Profile */}
       <div className="row justify-content-center text-white mt-3">
         <div className="d-flex gap-3  mediumResponsive">
-          <div className="flexBox">
+          {/* <div className="flexBox">
             {selectedProducts.slice(0, 2).map((res: any, index: number) => (
-              <div className="colo-md-6">
+              <div className="colo-md-6 dses">
                 <div className="text-center">
                   <div className="d-flex">
                     <h6 className="mt-2 text-black">COLOR {index + 1}</h6>
@@ -204,7 +204,17 @@ const xyz=varientData.varient
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
+
+
+
+
+
+
+
+
+
+
           <div className=" bg-dark p-5 rounded position-relative p-sm-3 innerProductPopup w-100">
             <div className="row ">
               <div

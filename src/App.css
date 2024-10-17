@@ -440,6 +440,51 @@ h2.pick_mood {
   background: transparent;
   text-transform: uppercase;
 }
+
+/* 17-10-2024 css started */
+.mobileColumnShadow.colo-md-6 {
+  border: 0;
+  padding: 20px;
+  min-width: 300px;
+  box-shadow: none;
+  height: auto;
+  min-height: auto;
+}
+.borderImage img {
+  width: 100%;
+}
+
+.borderImage {
+  border: 1px solid #c1c1c1;
+  height: 110px;
+  width: 110px;
+}
+
+h6.text-black.text-desciption {
+  display: none;
+}
+
+.mobileGrid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+.mobileYouColor{
+  color: rgb(220, 65, 161);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: Poppins;
+  font-size: 20px;
+}
+/* 17-10-2024 css ended */
+
+
+
+
+
+
+
+
 @media (min-width:767px){
 .backBtn{
 display: none;
@@ -626,6 +671,17 @@ color: #fff;
   width: 32%;
   min-width: 180px;
   overflow: hidden;
+}
+.borderImage {
+  border: 1px solid #c1c1c1;
+  height: 100px;
+  width: 100px;
+}
+
+.colo-md-6.mobileColumnShadow {width: 100px;
+min-width: 140px;
+overflow: hidden;
+padding: 0;
 }
 .btnCart {
   padding: 5px 20px;

@@ -53,15 +53,15 @@ const ProductCombine = () => {
   console.log(selectedProducts, "selectedProducts");
   const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 767);
-    };
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setIsMobile(window.innerWidth <= 767);
+  //   };
 
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  //   handleResize();
+  //   window.addEventListener("resize", handleResize);
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
   const artist:any = localStorage.getItem("artist");
   let asd=JSON.parse(artist)
 
@@ -111,10 +111,11 @@ const ProductCombine = () => {
       {/* Nail Artist Profile */}
       <div className="row justify-content-center text-white mt-3">
         <div className="d-flex gap-3  mediumResponsive">
-          {!isMobile ? (
-            <div className="flexBox">
+          {/* mobile structure started*/}
+          <div className="colorMobileStructure">
+            <div className="flexBox mobileGrid">
               {selectedProducts.slice(0, 2).map((res: any, index: number) => (
-                <div className="colo-md-6">
+                <div className="colo-md-6 mobileColumnShadow">
                   <div className="text-center">
                     <div className="d-flex">
                       <h6 className="mt-2 text-black">COLOR {index + 1}</h6>
@@ -127,12 +128,15 @@ const ProductCombine = () => {
                       </button>
                     </div>
                     <div className="text-center">
-                      <img
+                     <div className="borderImage">
+                     <img
                         src={res?.image} // Replace with actual image
                         alt="Color 1"
                         className="rounded"
                       />
-                      <h6 className="text-black">{res?.name}</h6>
+                       <h6 className="text-black text-desciption">{res?.name}</h6>
+                      </div>
+                     
                     </div>
 
                     <button className="btn btn-outline-secondary btn-sm mt-4 btnCart">
@@ -141,15 +145,73 @@ const ProductCombine = () => {
                         className="varient_id"
                         value={res?.varient_id}
                       />
-                      ADD TO BAG
+                      ADD Color TO BAG
                     </button>
                   </div>
                 </div>
               ))}
+              <div className="mobileYouColor">Your color Today</div>
+              </div>
+              <button className="btn btn-outline-secondary btn-sm mt-4 btnCart">
+                      <input
+                        type="hidden"
+                        className="varient_id"
+                      
+                      />
+                      ADD Color TO BAG
+                    </button>
+
+              </div>
+              {/* mobile structure ended*/}
+
+              <div>
+              
+
+
+
+
+
+
+<div className="flexBox">
+            {selectedProducts.slice(0, 2).map((res: any, index: number) => (
+              <div className="colo-md-6 ">
+                <div className="text-center">
+                  <div className="d-flex">
+                    <h6 className="mt-2 text-black">COLOR {index + 1}</h6>
+                    <button
+                      className="btn "
+                      style={{ border: "none", color: "red" }}
+                      onClick={() => handleRemoveColor(index)}
+                    >
+                      -
+                    </button>
+                  </div>
+                  <div className="text-center">
+                    <img
+                      src={res?.image} // Replace with actual image
+                      alt="Color 1"
+                      className="rounded"
+                    />
+                    <h6 className="text-black">{res?.name}</h6>
+                  </div>
+
+                  <button className="btn btn-outline-secondary btn-sm mt-4 btnCart">
+                    <input
+                      type="hidden"
+                      className="varient_id"
+                      value={res?.varient_id}
+                    />
+                    ADD TO BAG
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+     
+
             </div>
-          ) : (
-            ""
-          )}
+            
+        
           <div className=" bg-dark p-5 rounded position-relative p-sm-3 innerProductPopup w-100">
             <div className="row ">
               <div className=" ">
@@ -415,6 +477,16 @@ const ProductCombine = () => {
           </div>
         </div>
       </div>
+
+
+
+
+
+
+
+
+
+
 
       {/* Color Picker Section */}
       {/* <div className="row justify-content-center mt-5">
