@@ -507,19 +507,16 @@ const ProductDetail = () => {
                     </div>
                     <div className="borderImage">
                       <img
-                        src={res?.image} 
+                        src={res?.image}
                         alt={`Color ${index + 1}`}
                         className="rounded"
                       />
                     </div>
-                    {selectedProducts.length==1?
-                    <span>+</span>:""}
+                    {selectedProducts.length == 1 ? <span>+</span> : ""}
                     {/* Show "+" only if the current index is 0 and there is a next item */}
-                    {selectedProducts.length === 2 ? (
-        index === 0 && <span>+</span>
-      ) : (
-        index < selectedProducts.length - 1 && <span>+</span>
-      )}
+                    {selectedProducts.length === 2
+                      ? index === 0 && <span>+</span>
+                      : index < selectedProducts.length - 1 && <span>+</span>}
                   </div>
                   <button className="btn btn-outline-secondary btn-sm mt-4 btnCart">
                     <input
@@ -530,27 +527,28 @@ const ProductDetail = () => {
                     ADD Color TO BAG
                   </button>
                 </div>
-                {selectedProducts.length < 2?
-                <div key={index} className="mobileColumnShadow">
-                  <div className="text-center ">
-                    <div className="d-flex">
-                      <h6 className="mt-2">COLOR {index + 2}</h6>
-                      {/* <button
+                {selectedProducts.length < 2 ? (
+                  <div key={index} className="mobileColumnShadow">
+                    <div className="text-center ">
+                      <div className="d-flex">
+                        <h6 className="mt-2">COLOR {index + 2}</h6>
+                        {/* <button
                         className="btn"
                         style={{ border: "none", color: "red" }}
                         onClick={() => handleRemoveColor(index)}
                       >
                         -
                       </button> */}
+                      </div>
+                      <div className="borderImage"></div>
+
+                      {/* Show "+" only if the current index is 0 and there is a next item */}
+                      {/* {index < selectedProducts.length - 1 && <span>+</span>} */}
                     </div>
-                    <div className="borderImage">
-                     
-                    </div>
-                   
-                    {/* Show "+" only if the current index is 0 and there is a next item */}
-                    {/* {index < selectedProducts.length - 1 && <span>+</span>} */}
                   </div>
-                </div>:""}
+                ) : (
+                  ""
+                )}
                 {/* {index < selectedProducts.length - 1 && <span>+</span>} */}
               </>
             ))}
@@ -568,7 +566,7 @@ const ProductDetail = () => {
         ""
       )}
 
-       {/* {selectedProducts.length < 2?
+      {/* {selectedProducts.length < 2?
                     <div className="borderImage">
                       
                     </div>:""} */}
