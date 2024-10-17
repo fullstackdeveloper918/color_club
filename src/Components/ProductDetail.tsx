@@ -139,6 +139,8 @@ const ProductDetail = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+  console.log(selectedProducts,"selectedProducts");
+  
   return (
     <div className="container mt-5 ">
       {/* Heading */}
@@ -172,7 +174,7 @@ const ProductDetail = () => {
         <div className="col-1">
           <Link to={"/"}>
             <button className="btn btn-link backBtn">
-              <span className="bi bi-arrow-left"></span> BACK
+              <span className="bi bi-arrow-left"></span>{`<`} BACK
             </button>
           </Link>
         </div>
@@ -321,7 +323,8 @@ const ProductDetail = () => {
                   </p>
                 ) : (
                   <p className="">
-                    Great choice
+                    Great choice!
+                    <img src="https://9c35bd-26.myshopify.com/cdn/shop/files/Cute.png?v=1727258342" alt="" style={{height:"30px"}} className="" />
                     <br></br>
                     Now click to confirm and see your color theme for today
                   </p>
@@ -335,12 +338,15 @@ const ProductDetail = () => {
                   <div className="d-flex justify-content-center">
                     {colors.length > 0
                       ? colors.map((color, index) => (
+                        <>
                           <div
                             key={index}
                             className="color-circle"
                             style={{ backgroundColor: color.hex_code }}
                             onClick={() => handleColorClick(color)}
                           ></div>
+                        </>
+
                         ))
                       : xyz.map((color, index) => (
                           <div
@@ -351,9 +357,9 @@ const ProductDetail = () => {
                           ></div>
                         ))}
                   </div>
-                  {/* <button className="btn btn-link mt-3" style={{ color: "#f06" }}>
+                  <button className="btn btn-link mt-3" style={{ color: "#f06" }}>
                 I Just Want One Color <span>&gt;</span>
-              </button> */}
+              </button>
                 </div>
               ) : (
                 ""
@@ -365,7 +371,7 @@ const ProductDetail = () => {
                   className="justify-content-center mt-5 items-center "
                   to={`/product-color-combination`}
                 >
-                  <button className="items-center btnCart">
+                  <button className="items-center btnCart1">
                     I just want one color to express an emotion.
                   </button>
                 </Link>
@@ -373,7 +379,7 @@ const ProductDetail = () => {
                   className="justify-content-center mt-5 items-center "
                   to={`/`}
                 >
-                  <button className="items-center btnCart">
+                  <button className="items-center btnCart1">
                     I would like to choose a different color for the first one.
                   </button>
                 </Link>
@@ -552,14 +558,16 @@ const ProductDetail = () => {
                 {/* {index < selectedProducts.length - 1 && <span>+</span>} */}
               </>
             ))}
-
+<span className="">{`>`}</span>
             <div className="mobileYouColor"> Your color Today</div>
           </div>
           <Link to={`/product-color-combination`}>
-            <button className="btn btn-outline-secondary btn-sm mt-4 btnCart">
-              <input type="hidden" className="varient_id" />
+          {selectedProducts?.length !==1 ?
+            <button className="btn btn-outline-secondary btn-sm mt-4 btnCart1">
+              <input type="hidden" className="varient_id"  />
               VIEW MY COLOR THEME FOR TODAY
             </button>
+            :""} 
           </Link>
         </div>
       ) : (

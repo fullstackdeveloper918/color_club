@@ -62,13 +62,13 @@ const ProductCombine = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  const artist:any = localStorage.getItem("artist");
-  let asd=JSON.parse(artist)
+  const artist: any = localStorage.getItem("artist");
+  let asd = JSON.parse(artist);
 
   const navigate = useNavigate();
-  const push=()=>{
-    navigate(`/cart`)
-  }
+  const push = () => {
+    navigate(`/cart`);
+  };
   return (
     <div className="container mt-5 ">
       {/* Heading */}
@@ -102,7 +102,7 @@ const ProductCombine = () => {
         <div className="col-1">
           <Link to={"/"}>
             <button className="btn btn-link backBtn">
-              <span className="bi bi-arrow-left"></span> BACK
+              <span className="bi bi-arrow-left"></span>{`<`} BACK
             </button>
           </Link>
         </div>
@@ -112,57 +112,47 @@ const ProductCombine = () => {
       <div className="row justify-content-center text-white mt-3">
         <div className="d-flex gap-3  mediumResponsive">
           {/* mobile structure started*/}
-       
-              {/* mobile structure ended*/}
 
-              <div>
-              
+          {/* mobile structure ended*/}
 
+          <div>
+            <div className="flexBox">
+              {selectedProducts.slice(0, 2).map((res: any, index: number) => (
+                <div className="colo-md-6 ">
+                  <div className="text-center">
+                    <div className="d-flex">
+                      <h6 className="mt-2 text-black">COLOR {index + 1}</h6>
+                      <button
+                        className="btn "
+                        style={{ border: "none", color: "red" }}
+                        onClick={() => handleRemoveColor(index)}
+                      >
+                        -
+                      </button>
+                    </div>
+                    <div className="text-center">
+                      <img
+                        src={res?.image} // Replace with actual image
+                        alt="Color 1"
+                        className="rounded"
+                      />
+                      <h6 className="text-black">{res?.name}</h6>
+                    </div>
 
-
-
-
-
-<div className="flexBox">
-            {selectedProducts.slice(0, 2).map((res: any, index: number) => (
-              <div className="colo-md-6 ">
-                <div className="text-center">
-                  <div className="d-flex">
-                    <h6 className="mt-2 text-black">COLOR {index + 1}</h6>
-                    <button
-                      className="btn "
-                      style={{ border: "none", color: "red" }}
-                      onClick={() => handleRemoveColor(index)}
-                    >
-                      -
+                    <button className="btn btn-outline-secondary btn-sm mt-4 btnCart">
+                      <input
+                        type="hidden"
+                        className="varient_id"
+                        value={res?.varient_id}
+                      />
+                      ADD TO BAG
                     </button>
                   </div>
-                  <div className="text-center">
-                    <img
-                      src={res?.image} // Replace with actual image
-                      alt="Color 1"
-                      className="rounded"
-                    />
-                    <h6 className="text-black">{res?.name}</h6>
-                  </div>
-
-                  <button className="btn btn-outline-secondary btn-sm mt-4 btnCart">
-                    <input
-                      type="hidden"
-                      className="varient_id"
-                      value={res?.varient_id}
-                    />
-                    ADD TO BAG
-                  </button>
                 </div>
-              </div>
-            ))}
-          </div>
-     
-
+              ))}
             </div>
-            
-        
+          </div>
+
           <div className=" bg-dark p-5 rounded position-relative p-sm-3 innerProductPopup w-100">
             <div className="row ">
               <div className=" ">
@@ -180,32 +170,57 @@ const ProductCombine = () => {
                     }}
                   ></div>
                 </div>
-                <h6 className="mt-2 mb-1">Color theme for today</h6>
-                <h2>Joyfull</h2>
+                <div className="d-flex gap-2">
+{!isMobile?
+                <img
+                  src="https://via.placeholder.com/100"
+                  alt="Bessie Nail Artist"
+                  className="rounded-circle"
+                  style={{height:"40px"}}
+                  />:""}
+                <h6 className="mt-2 mb-1">Your color theme for today is</h6>
+                  </div>
+                <h2> <img
+                 src="https://9c35bd-26.myshopify.com/cdn/shop/files/Cute.png?v=1727258342" alt="" style={{height:"30px"}}
+                  className="rounded-circle"
+                
+                  />Joyful Exploration
+                   <img
+                 src="https://9c35bd-26.myshopify.com/cdn/shop/files/Inlove.png?v=1727258342" alt="" style={{height:"30px"}}
+                  className="rounded-circle"
+                
+                  />
+                   <img
+                 src="https://9c35bd-26.myshopify.com/cdn/shop/files/Cute.png?v=1727258342" alt="" style={{height:"30px"}}
+                  className="rounded-circle"
+                
+                  />
+                  </h2>
               </div>
               <div className=" col-sm-12">
                 <p>
-                  Hey, I'm {asd}, your local nail artist! Choose Mysterious
+                  {/* Hey, I'm {asd}, your local nail artist! Choose Mysterious
                   Delight for a fabulous look. Mix it with other colors to
                   create a unique, visually pleasing nail design. Explore new
-                  styles and bring joy to your nails!
+                  styles and bring joy to your nails! */}
+                  Picture yourself as a bold adventurer in a purple enchanted forest, setting off on a blue fantastical journey. Every step is an adventure, every turn a chance to explore the unknown. Let's bravely move forward with a joyful heart!
                 </p>
                 <a href="/cart" className="">
-                <button className="whitBtn" >Add all product to bag</button>
+                  <button className="whitBtn">Add all product to bag</button>
                 </a>
                 <div className="d-flex justify-content-between">
                   <a href="/" className="">
                     <button className="tryBtn tryagain">Try Again</button>
                   </a>
                   <div className="">
-                 
-                  <button className="tryBtn sharebtn">
-                  <input
-                          type="hidden"
-                          className="product_id"
-                          value={selectedProducts[0]?.link}
-                        />
-                    SHARE</button>
+                    <button className="tryBtn sharebtn">
+                      <input
+                        type="hidden"
+                        className="product_id"
+                        value={selectedProducts[0]?.link}
+                      />
+                      SHARE
+                    </button>
                   </div>
                 </div>
                 <button className="pinkBtn">Share Color Today</button>
@@ -247,7 +262,7 @@ const ProductCombine = () => {
             </button>
           </div>
         </div> */}
-            
+
             {/* model move  */}
 
             {modalVisible && (
@@ -307,32 +322,39 @@ const ProductCombine = () => {
         <div className="container mt-5">
           <div className="flexBox">
             {/* Left Section with User Info */}
-            {!isMobile?
-            <div
-              className="colo-lg-6  flexBox pt-5"
-              style={{ boxShadow: "none", border: "0", background: "#F5F5F5" }}
-            >
-              <div className="col-md-3 col-sm-12 text-center">
-                <img
-                  src="https://via.placeholder.com/100" // Replace with the actual image
-                  alt="Bessie Nail Artist"
-                  className="rounded-circle"
-                />
-                <p className="mt-2 mb-1 text-black">Beetles Nail Artist</p>
-                <h5 style={{ color: "#dc41a1" }}>{asd}</h5>
+            {!isMobile ? (
+              <div
+                className="colo-lg-6  flexBox pt-5"
+                style={{
+                  boxShadow: "none",
+                  border: "0",
+                  background: "#F5F5F5",
+                }}
+              >
+                <div className="col-md-3 col-sm-12 text-center">
+                  <img
+                    src="https://via.placeholder.com/100" // Replace with the actual image
+                    alt="Bessie Nail Artist"
+                    className="rounded-circle"
+                  />
+                  <p className="mt-2 mb-1 text-black">Beetles Nail Artist</p>
+                  <h5 style={{ color: "#dc41a1" }}>{asd}</h5>
+                </div>
+                <div>
+                  <h2 style={{ color: "#000" }}>Congratulations! 😄</h2>
+                  <p style={{ color: "#000" }}>
+                    You’ve found the color that suits your mood today. Many
+                    people use colors associated with happiness to create their
+                    nails! You can draw inspiration from that. We included the
+                    colors in the Boett’s combination kit, which includes gels
+                    in a wide range of colors and some tools. This way, you can
+                    experiment with different colors every day!
+                  </p>
+                </div>
               </div>
-              <div>
-                <h2 style={{ color: "#000" }}>Congratulations! 😄</h2>
-                <p style={{ color: "#000" }}>
-                  You’ve found the color that suits your mood today. Many people
-                  use colors associated with happiness to create their nails!
-                  You can draw inspiration from that. We included the colors in
-                  the Boett’s combination kit, which includes gels in a wide
-                  range of colors and some tools. This way, you can experiment
-                  with different colors every day!
-                </p>
-              </div>
-            </div>:""}
+            ) : (
+              ""
+            )}
 
             {/* Right Section with Product Info */}
             {!isMobile ? (
@@ -345,7 +367,7 @@ const ProductCombine = () => {
                 }}
               >
                 <div className="card mb-3 text-center flexRow border-0">
-                  {colors?.slice(0,2).map((res: any) => (
+                  {colors?.slice(0, 2).map((res: any) => (
                     <div className="card-body ">
                       <div className="text-center">
                         <img
@@ -429,16 +451,6 @@ const ProductCombine = () => {
           </div>
         </div>
       </div>
-
-
-
-
-
-
-
-
-
-
 
       {/* Color Picker Section */}
       {/* <div className="row justify-content-center mt-5">
