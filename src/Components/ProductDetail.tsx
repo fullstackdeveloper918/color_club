@@ -507,7 +507,7 @@ const ProductDetail = () => {
                     </div>
                     <div className="borderImage">
                       <img
-                        src={res?.image} // Replace with actual image
+                        src={res?.image} 
                         alt={`Color ${index + 1}`}
                         className="rounded"
                       />
