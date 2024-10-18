@@ -1,8 +1,6 @@
-import React, { useState } from "react";
-import logo from "./logo.svg";
+import { useState } from "react";
 import "../App.css";
 import data from "../constant/data.json";
-import { Link } from "react-router-dom";
 import Modal from "./Modal";
 const Home = () => {
   const [activeTab, setActiveTab] = useState<"emotions" | "trends">("emotions");
@@ -13,7 +11,7 @@ const Home = () => {
   const [selectedProducts, setSelectedProducts] = useState([]);
   const productData: any = data.moods;
   console.log(activeEmojiIndex, "activeEmojiIndex");
-
+  const [selectedIndex, setSelectedIndex] = useState<any>(null);
   const colorSets = [
     [
       "#F9DC24",
@@ -292,11 +290,12 @@ const Home = () => {
     }
 
     setActiveEmojiIndex(index); // Set the active emoji index
+    setShowModal(false);
   };
   // const moodData = productData.find((mood:any) => mood.mood === emojiName);
   // console.log(moodData,moodData);
 
-  const handleColorClick = (color: any) => {
+  const handleColorClick = (color: any, index:any) => {
     console.log(color, "color");
 
     const moodData = productData?.find((mood: any) => mood?.mood === emojiName);
@@ -309,6 +308,7 @@ const Home = () => {
     console.log(products, "products");
 
     setSelectedProducts(products);
+    setSelectedIndex(index); // Set the selected index
     setShowModal(true); // This will trigger the modal to open
     // }
   };
@@ -316,6 +316,7 @@ const Home = () => {
   const closeModal = () => {
     setShowModal(false);
     setSelectedProducts([]);
+    setSelectedIndex(null);
   };
 
   const [activeTrend, setActiveTrend] = useState("2024 Color Trends");
@@ -416,7 +417,7 @@ const Home = () => {
                           }}
                           data-bs-toggle="modal"
                           data-bs-target="#exampleModal"
-                          onClick={() => handleColorClick(color)}
+                          onClick={() => handleColorClick(color, index)}
                         >
                           {/* {color}  */}
                         </button>
@@ -437,7 +438,7 @@ const Home = () => {
                           }}
                           data-bs-toggle="modal"
                           data-bs-target="#exampleModal"
-                          onClick={() => handleColorClick(color)}
+                          onClick={() => handleColorClick(color, index)}
                         >
                           {/* {color}  */}
                         </button>
@@ -445,11 +446,17 @@ const Home = () => {
                     ))}
               </div>
               {showModal && (
+                // <Modal
+                //   emojiName={emojiName}
+                //   closeModal={closeModal}
+                //   selectedProducts={selectedProducts}
+                // />
                 <Modal
-                  emojiName={emojiName}
-                  closeModal={closeModal}
-                  selectedProducts={selectedProducts}
-                />
+                emojiName={emojiName}
+                closeModal={closeModal}
+                selectedProducts={selectedProducts}
+                selectedIndex={selectedIndex} // Pass the selected index
+              />
               )}
             </div>
           </div>
@@ -535,7 +542,7 @@ const Home = () => {
                         }}
                         data-bs-toggle="modal"
                         data-bs-target="#exampleModal"
-                        onClick={() => handleColorClick(color)}
+                        onClick={() => handleColorClick(color, index)}
                       >
                         {/* {color}  */}
                       </button>
@@ -556,7 +563,7 @@ const Home = () => {
                         }}
                         data-bs-toggle="modal"
                         data-bs-target="#exampleModal"
-                        onClick={() => handleColorClick(color)}
+                        onClick={() => handleColorClick(color, index)}
                       >
                         {/* {color}  */}
                       </button>

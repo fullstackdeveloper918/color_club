@@ -636,7 +636,11 @@ p.bottom_emoji {
 /* .width50{
   width: 47.5%;
 } */
-
+.popup_product {
+right: 0px;
+margin: 0px auto;
+ 
+}
 }
 @media (min-width:575px){
   .pinkBtn{

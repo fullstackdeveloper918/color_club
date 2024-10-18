@@ -227,8 +227,13 @@ const ProductCombine = () => {
                     </button>
                   </div>
                 </div>
-                <button className="pinkBtn">SHARE TODAY'S COLOR Today</button>
-                <button className="pinkBtn">ADD TODAY'S COLOR TO BAG</button>
+                <button className="pinkBtn sharebtn">  <input
+                        type="hidden"
+                        className="product_id"
+                        value={selectedProducts[0]?.link}
+                      />SHARE TODAY'S COLOR Today</button>
+                        <a href="/cart" className="">
+                <button className="pinkBtn">ADD TODAY'S COLOR TO BAG</button></a>
               </div>
             </div>
 
@@ -427,8 +432,7 @@ const ProductCombine = () => {
             </div>
            </div>
             <div className="justify-content-end">
-
-            <p className="text-black mt-4">SEE MORE</p>
+            <p className="text-black mt-4 btnSeeMore">SEE MORE <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><title/><path d="M39.3756,48.0022l30.47-25.39a6.0035,6.0035,0,0,0-7.6878-9.223L26.1563,43.3906a6.0092,6.0092,0,0,0,0,9.2231L62.1578,82.615a6.0035,6.0035,0,0,0,7.6878-9.2231Z"/></svg></p>
             </div>
           {isMobile ? (
               <div
